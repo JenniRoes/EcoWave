@@ -1,0 +1,9 @@
+@use '../abstracts/vars';
+
+body {
+    font-family: vars.$ff-primary;
+}
+
+.m-start {
+    margin-left: 60px;
+}

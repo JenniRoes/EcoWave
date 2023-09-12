@@ -1,0 +1,28 @@
+/* font & weight */
+$ff-primary: 'Inter', sans-serif;;
+$fw-reg: 500;
+$fw-bold: 700;
+
+/* font sizes */
+$fs-rg: 20px;
+$fs-md: 24px;
+$fs-mdl: 25px;
+$fs-lg: 36px; 
+$fs-xlg: 48px;
+
+/* colors */
+$clr-white: #ffffff;
+$clr-gray-50: #DDD;
+$clr-gray-100: #686868;
+$clr-green-50: #9FCE99;
+$clr-green-100: #6EBA68; 
+$clr-lightblue: #5FABDF; 
+$clr-black: #000000;
+
+/*breakpoints*/
+$phone: '(max-width: 480px)';
+$tablet-portrait: '(max-width: 767px)';
+$tablet-landscape: '(min-width: 768px) and (max-width: 979px)';
+$large-desktop: '(min-width: 1200px)';
+$non-retina: 'screen and (-webkit-max-device-pixel-ratio: 1)';
+$retina: '(min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)';

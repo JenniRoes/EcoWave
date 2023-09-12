@@ -1,0 +1,13 @@
+@use '../abstracts/vars';
+
+.navbar-item {
+    color: vars.$clr-black;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-mdl;
+    font-weight: vars.$fw-reg;
+    margin-top: 69px;
+}
+
+.no-link {
+    text-decoration: none;
+}

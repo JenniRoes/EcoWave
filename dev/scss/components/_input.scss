@@ -1,0 +1,15 @@
+@use '../abstracts/vars';
+
+.input-search {
+    background: vars.$clr-gray-50;
+    border: none;
+    border-radius: 17px;
+    width: 248px;
+    height: 49px;
+}
+
+.input-search ::placeholder {
+    color: vars.$clr-white;
+    font-size: vars.$fs-mdl;
+    padding-left: 25px;
+}

@@ -1,0 +1,24 @@
+@use '../abstracts/vars';
+
+.btn-login {
+    width: 305px;
+    height: 81px;
+    border-radius: 17px;
+    border: none;
+    background: vars.$clr-green-50;
+    margin-right: 75px;
+    margin-left: 54px;
+    color: vars.$clr-white;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-mdl;
+    font-weight: vars.$fw-reg;
+}
+
+.btn-login img {
+    margin-left: 33px;
+    padding: 10px;
+    width: 66px;
+    height: 66px;
+    border-radius: 17px;
+    background: vars.$clr-green-100;
+}
