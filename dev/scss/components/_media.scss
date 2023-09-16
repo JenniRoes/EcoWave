@@ -3,4 +3,21 @@
 .logo {
     margin-left: 75px;
     margin-right: 41px;
+    width: 272px;
+    height: 72px;
+
+}
+
+.navbar-toggler-icon {
+    margin-right: 20px;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='116, 37, 57'%3e%3cpath stroke='green' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+@media screen and (vars.$phone) {
+    .logo {
+        margin-left: 10px;
+        width: 122px;
+        height: 33px;
+    }
 }

@@ -12,6 +12,7 @@
     font-family: vars.$ff-primary;
     font-size: vars.$fs-mdl;
     font-weight: vars.$fw-reg;
+    margin-right: 50px;
 }
 
 .btn-login img {
@@ -21,4 +22,20 @@
     height: 66px;
     border-radius: 17px;
     background: vars.$clr-green-100;
+}
+
+@media screen and (vars.$phone) {
+    .btn-login {
+        width: 120px;
+        height: 26px;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 30px;
+        font-size: vars.$fs-sm;
+        margin-right: 0px;
+    }
+    
+    .btn-login img {
+        display: none;
+    }
 }

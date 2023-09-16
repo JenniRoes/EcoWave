@@ -11,3 +11,14 @@
 .no-link {
     text-decoration: none;
 }
+
+@media screen and (vars.$phone) {
+    .navbar-item {
+        font-size: vars.$fs-sm;
+        margin-top: 30px;
+    }
+
+    .mt-mobile {
+        margin-top: 20px;
+    }
+}

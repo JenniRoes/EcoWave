@@ -7,3 +7,9 @@ body {
 .m-start {
     margin-left: 60px;
 }
+
+@media screen and (vars.$phone) {
+    .m-start {
+        margin-left: 30px;
+    }
+}

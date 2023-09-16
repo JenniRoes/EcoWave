@@ -13,3 +13,21 @@
     font-size: vars.$fs-mdl;
     padding-left: 25px;
 }
+
+@media screen and (vars.$phone) {
+    .input-search {
+        width: 120px;
+        height: 26.11px;
+    }
+
+    .input-search ::placeholder {
+        font-size: vars.$fs-sm;
+        padding-left: 0px;
+    }
+
+    .input-search img {
+        width: 15px;
+        height: 15px;
+        margin-bottom: 50px;
+    }
+}

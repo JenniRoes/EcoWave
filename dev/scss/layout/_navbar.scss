@@ -1,0 +1,11 @@
+@use '../abstracts/vars';
+
+nav {
+    margin-top: 60px;
+}
+
+@media screen and (vars.$phone) {
+    nav {
+        margin-top: 20px;
+    }
+}
