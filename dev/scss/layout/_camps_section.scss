@@ -1,0 +1,30 @@
+@use '../abstracts/vars';
+
+.camp-section{
+    margin: 3rem;
+}
+.camp-title-div{
+    font-family: vars.$ff-primary;
+    display: flex;
+}
+
+.section-camp-title{
+    color: vars.$clr-green-100;
+}
+
+/*MEDIA QUERY*/
+@media (max-width: 768px) {
+    .camp-section{
+        margin: 2rem;
+    }
+
+    .camp-title-div{
+        justify-content: center;
+    }
+    
+    .section-camp-title{
+        margin: 0;
+        margin-bottom: 1rem;
+        font-size: vars.$fs-mdl;
+    }
+}
