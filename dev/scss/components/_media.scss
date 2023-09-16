@@ -1,6 +1,16 @@
 @use '../abstracts/vars';
+@use '../vendor/media-queries';
 
 .logo {
     margin-left: 75px;
     margin-right: 41px;
 }
+
+.banner{
+    background: none;
+    border-radius: none;
+    @include media-queries.respond-to(media-queries.$phone){
+        width:150%
+    }
+}
+

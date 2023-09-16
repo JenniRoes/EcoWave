@@ -13364,9 +13364,51 @@ body {
   text-decoration: none;
 }
 
+.banner-title {
+  font-size: 48px;
+  color: #ffffff;
+}
+@media only screen and (max-width: 600px) {
+  .banner-title {
+    font-size: 24px;
+  }
+}
+
+.banner-text {
+  font-size: 25px;
+  color: #ffffff;
+}
+@media only screen and (max-width: 600px) {
+  .banner-text {
+    font-size: 16px;
+  }
+}
+
+.banner-p {
+  position: absolute;
+  padding-left: 100px;
+  padding-top: 100px;
+}
+@media only screen and (max-width: 600px) {
+  .banner-p {
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+}
+
 .logo {
   margin-left: 75px;
   margin-right: 41px;
+}
+
+.banner {
+  background: none;
+  border-radius: none;
+}
+@media only screen and (max-width: 600px) {
+  .banner {
+    width: 150%;
+  }
 }
 
 .input-search {

@@ -1,4 +1,5 @@
 @use '../abstracts/vars';
+@use '../vendor/media-queries';
 
 .navbar-item {
     color: vars.$clr-black;
@@ -10,4 +11,30 @@
 
 .no-link {
     text-decoration: none;
+}
+
+.banner-title{
+    font-size: vars.$fs-xlg;
+    color: vars.$clr-white;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: vars.$fs-md;
+    }
+}
+
+.banner-text{
+    font-size: vars.$fs-mdl;
+    color: vars.$clr-white;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: vars.$fs-s;
+    }
+}
+
+.banner-p{
+    position: absolute;
+    padding-left: 100px;
+    padding-top: 100px;
+    @include media-queries.respond-to(media-queries.$phone){
+        padding-left: 20px;
+        padding-top: 20px;
+    }
 }
