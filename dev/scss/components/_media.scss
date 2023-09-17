@@ -1,6 +1,26 @@
 @use '../abstracts/vars';
+@use '../components/media-queries';
 
 .logo {
     margin-left: 75px;
     margin-right: 41px;
+}
+
+.user-img{
+    margin-left: 4.688rem;
+    margin-right: 4.563rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        padding-left: 4rem;
+    }
+}
+
+.center{
+    margin: 5rem;
+    position:relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.user-campain{
+    padding-top: 2rem;
 }

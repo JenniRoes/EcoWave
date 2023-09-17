@@ -1,4 +1,5 @@
 @use '../abstracts/vars';
+@use '../components/media-queries';
 
 .navbar-item {
     color: vars.$clr-black;
@@ -11,3 +12,88 @@
 .no-link {
     text-decoration: none;
 }
+
+.user-title{
+    margin-top: 1rem;
+    color: vars.$clr-black;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-lg;
+    font-weight: vars.$fw-bold;
+    @include media-queries.respond-to(media-queries.$phone){
+        justify-content: center;
+        margin-left: 5rem;
+        margin-right: 1rem;
+    }
+}
+
+
+.user-subtitle{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: vars.$clr-green-100;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-mdl;
+    font-weight: vars.$fw-bold;
+    @include media-queries.respond-to(media-queries.$phone){
+        justify-content: center;
+        margin-left: 9rem;
+        margin-right: 4rem;
+    }
+}
+
+.user-subtitle-black{
+    color: vars.$clr-black;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-mdl;
+    font-weight: vars.$fw-bold;
+    @include media-queries.respond-to(media-queries.$phone){
+        justify-content: center;
+        margin-left: 9rem;
+    }
+
+}
+
+.user-small{
+    color: vars.$clr-gray-100;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-rg;
+    font-weight: vars.$fw-reg;
+    margin-top:1rem;
+    margin-bottom: 2rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        justify-content: center;
+        margin-left: 7rem;
+        margin-right: 2rem;
+    }
+}
+.user-small-green{
+    color: vars.$clr-green-50;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-rg;
+    font-weight: vars.$fw-reg;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        justify-content: center;
+        margin-left: 9rem;
+    }
+}
+
+
+.user-body{
+    color: vars.$clr-gray-100;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-mdl;
+    font-weight: vars.$fw-reg;
+    margin-top: 1rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        justify-content: center;
+        font-size: vars.$fs-rg;
+        margin-left: 5rem;
+        margin-right: 1rem;
+        padding-left: -2rem;
+        padding-right: -2rem;
+        padding-bottom: 2rem;
+    }
+}
+

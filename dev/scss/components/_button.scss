@@ -14,6 +14,20 @@
     font-weight: vars.$fw-reg;
 }
 
+.btn-perfil {
+    width: 10rem;
+    height: 2.25rem;
+    border-radius: 17px;
+    border: none;
+    background: vars.$clr-green-50;
+    margin-right: 75px;
+    margin-left: 54px;
+    color: vars.$clr-white;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-rg;
+    font-weight: vars.$fw-reg;
+}
+
 .btn-login img {
     margin-left: 33px;
     padding: 10px;
@@ -21,4 +35,18 @@
     height: 66px;
     border-radius: 17px;
     background: vars.$clr-green-100;
+}
+
+.btn-blue{
+    width: 10rem;
+    height: 2.25rem;
+    border-radius: 17px;
+    border: none;
+    background: vars.$clr-white;
+    margin-right: 75px;
+    margin-left: -36px;
+    color: vars.$clr-lightblue;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-rg;
+    font-weight: vars.$fw-reg;
 }
