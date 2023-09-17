@@ -11,3 +11,35 @@
 .no-link {
     text-decoration: none;
 }
+
+.login-title{
+    color: vars.$clr-black;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-lg;
+    font-weight: vars.$fw-bold;
+    text-align: center;
+    margin-top: 4vh;
+    margin-bottom: 8vh;
+
+}
+
+.login-text{
+    color: vars.$clr-black;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-rg;
+    font-weight: vars.$fw-reg;
+    margin-right: 2vh;
+    margin-top: 3vh;
+
+}
+
+.login-input{
+    background-color: vars.$clr-gray-50;
+    color: vars.$clr-black;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-rg;
+    font-weight: vars.$fw-reg;
+    border-radius: 2vh;
+    width: 40vh;
+    margin-top: 3vh;
+}
