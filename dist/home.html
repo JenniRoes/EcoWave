@@ -27,10 +27,31 @@
         <section>
             <banner></banner>
         </section>
-        <section>
-            <sidecard></sidecard>
+        <section class="d-flex m-sidecard">
+
+            <div class="col-3 me-3">
+                <h5 class="section-camp-title fw-bold">Árticulos Recomendados</h5>
+                <sidecard class="mb-5"></sidecard>
+                <sidecard class="mb-5"></sidecard>
+                <sidecard class="mb-5"></sidecard>
+            </div>
+            <div class="col-9 card border border-0 rounded mb-5">
+                <div class="camps_container"> <!--Contenedor general de campañas-->
+                    <div class="camp-title-div">
+                        <h5 class="section-camp-title fw-bold">Campañas</h5>
+                    </div>
+                    <div class="camps-card-container"> <!--Contenedor de cards-->
+                        <cards></cards>
+                        <cards></cards>
+                        <cards></cards>
+                    </div>
+                </div>
+            </div>
         </section>
 
+    <footer>
+        <footer-nav></footer-nav>
+    </footer>
         
     </section>
 
@@ -47,6 +68,7 @@
     <script src="./js/components/Navbar.js"></script>
     <script src="./js/components/Footer.js"></script>
     <script src="./js/components/banner.js"></script>
+    <script src="./js/components/cards.js"></script>
     <script src="./js/components/sidecard.js"></script>
 
     <!--mounted app-->

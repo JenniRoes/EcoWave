@@ -1,7 +1,9 @@
 @use '../abstracts/vars';
+@use '../vendor/media-queries';
 
 body {
     font-family: vars.$ff-primary;
+    width: 100%;
 }
 
 .m-start {
@@ -20,7 +22,11 @@ body {
     background-attachment: fixed;
     padding-bottom: 20rem; 
     padding-top: 7rem;
+}
 
-        
-    
+.m-sidecard{
+    margin: 100px;
+    @include media-queries.respond-to(media-queries.$phone){
+        margin: 30px;
+    }
 }

@@ -79,6 +79,9 @@
     font-weight: 500;
     line-height: normal;
     text-decoration-line: underline;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 20px;
+    }
 }
 
 .sidecard-subtitle{
@@ -88,4 +91,7 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    @include media-queries.respond-to(media-queries.$phone){
+        font-size: 15px;
+    }
 }

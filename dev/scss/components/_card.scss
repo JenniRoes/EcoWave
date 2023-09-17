@@ -1,0 +1,33 @@
+@use '../abstracts/vars';
+
+.card-body{
+   // padding: 0;
+   // margin-right: 3rem;
+}
+
+.camp-date{
+    font-family: vars.$ff-primary;
+    color: vars.$clr-green-100;
+}
+
+.camp-description{
+    font-family: vars.$ff-primary;
+}
+
+.card-img{
+    //max-height: 100%;
+    //scale: 1.5;
+}
+
+/*MEDIA QUERY*/
+@media (max-width: 768px) {
+    .card-flex{
+        flex-direction: column-reverse;
+    }
+
+    .card-body{
+        margin: 0;
+        padding-top: 1rem;
+    }
+}
+  
