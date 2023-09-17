@@ -1,0 +1,35 @@
+
+@use '../abstracts/vars';
+
+.card-login{
+    width: 50%;
+    margin-top:5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh auto;
+    border-radius: 5vh;
+
+    @media screen and (max-width: 768px) {
+        width: 90%; 
+        margin-top: 2vh;
+    }
+}
+
+.btn-access {
+    width: 30vh;
+    height: 5vh;
+    border: none;
+    border-radius: 2vh;
+    background: vars.$clr-green-100;
+    text-align: center;
+    color: vars.$clr-white;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-rg;
+    font-weight: vars.$fw-reg;
+    display: flex; 
+    justify-content: center; 
+    text-decoration: none; 
+    padding-top: 1vh;
+}
+
