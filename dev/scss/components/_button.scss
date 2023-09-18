@@ -1,4 +1,5 @@
 @use '../abstracts/vars';
+@use '../abstracts/media-queries';
 
 .btn-login {
     width: 305px;
@@ -12,6 +13,16 @@
     font-family: vars.$ff-primary;
     font-size: vars.$fs-mdl;
     font-weight: vars.$fw-reg;
+
+    @include media-queries.respond-to(vars.$phone) {
+            width: 120px;
+            height: 26px;
+            margin-right: 0px;
+            margin-left: 0px;
+            margin-top: 30px;
+            font-size: vars.$fs-xs;
+            margin-right: 0px;
+    }
 }
 
 .btn-login img {
@@ -21,22 +32,23 @@
     height: 66px;
     border-radius: 17px;
     background: vars.$clr-green-100;
+
+    @include media-queries.respond-to(vars.$phone) {
+            display: none;
+    }
 }
 
 .camp-btn{
     background: none;
     font-family: vars.$ff-primary;
     color: vars.$clr-lightblue;
-}
 
-/*MEDIA QUERY*/
-@media (max-width: 768px) {
-    .camp-btn{
-        background: vars.$clr-lightblue;
-        color: vars.$clr-white;
-        width: 8rem;
-        height: 2rem;
-        border-radius: .7rem;
-        margin-top: 1rem;
+    @include media-queries.respond-to(vars.$phone){
+            background: vars.$clr-lightblue;
+            color: vars.$clr-white;
+            width: 8rem;
+            height: 2rem;
+            border-radius: .7rem;
+            margin-top: 1rem;
     }
 }

@@ -1,9 +1,5 @@
 @use '../abstracts/vars';
-
-.card-body{
-   // padding: 0;
-   // margin-right: 3rem;
-}
+@use '../abstracts/media-queries';
 
 .camp-date{
     font-family: vars.$ff-primary;
@@ -14,13 +10,9 @@
     font-family: vars.$ff-primary;
 }
 
-.card-img{
-    //max-height: 100%;
-    //scale: 1.5;
-}
 
 /*MEDIA QUERY*/
-@media (max-width: 768px) {
+@include media-queries.respond-to(vars.$phone) {
     .card-flex{
         flex-direction: column-reverse;
     }
@@ -28,6 +20,12 @@
     .card-body{
         margin: 0;
         padding-top: 1rem;
+    }
+
+    .card-responsive {
+        width: 100%;
+        margin: auto;
+        box-sizing: border-box;
     }
 }
   

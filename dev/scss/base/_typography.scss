@@ -1,5 +1,5 @@
 @use '../abstracts/vars';
-@use '../vendor/media-queries';
+@use '../abstracts/media-queries';
 
 .navbar-item {
     color: vars.$clr-black;
@@ -7,6 +7,11 @@
     font-size: vars.$fs-mdl;
     font-weight: vars.$fw-reg;
     margin-top: 69px;
+
+    @include media-queries.respond-to(vars.$phone){
+            font-size: vars.$fs-sm;
+            margin-top: 30px;
+    }
 }
 
 .no-link {
@@ -16,7 +21,7 @@
 .banner-title{
     font-size: vars.$fs-xlg;
     color: vars.$clr-white;
-    @include media-queries.respond-to(media-queries.$phone){
+    @include media-queries.respond-to(vars.$phone){
         font-size: vars.$fs-md;
     }
 }
@@ -24,8 +29,8 @@
 .banner-text{
     font-size: vars.$fs-mdl;
     color: vars.$clr-white;
-    @include media-queries.respond-to(media-queries.$phone){
-        font-size: vars.$fs-s;
+    @include media-queries.respond-to(vars.$phone){
+        font-size: vars.$fs-sm;
     }
 }
 
@@ -33,7 +38,7 @@
     position: absolute;
     padding-left: 100px;
     padding-top: 100px;
-    @include media-queries.respond-to(media-queries.$phone){
+    @include media-queries.respond-to(vars.$phone){
         padding-left: 20px;
         padding-top: 20px;
     }
@@ -79,7 +84,7 @@
     font-weight: 500;
     line-height: normal;
     text-decoration-line: underline;
-    @include media-queries.respond-to(media-queries.$phone){
+    @include media-queries.respond-to(vars.$phone){
         font-size: 20px;
     }
 }
@@ -91,7 +96,13 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    @include media-queries.respond-to(media-queries.$phone){
+    @include media-queries.respond-to(vars.$phone){
         font-size: 15px;
+    }
+}
+
+@media screen and (vars.$phone) {
+    .mt-mobile {
+        margin-top: 20px;
     }
 }

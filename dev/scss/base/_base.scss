@@ -1,5 +1,5 @@
 @use '../abstracts/vars';
-@use '../vendor/media-queries';
+@use '../abstracts/media-queries';
 
 body {
     font-family: vars.$ff-primary;
@@ -8,6 +8,10 @@ body {
 
 .m-start {
     margin-left: 60px;
+
+    @include media-queries.respond-to(vars.$phone){
+        margin-left: 30px;
+    }
 }
 
 .m-footer-txt{
@@ -26,7 +30,11 @@ body {
 
 .m-sidecard{
     margin: 100px;
-    @include media-queries.respond-to(media-queries.$phone){
+    @include media-queries.respond-to(vars.$phone){
         margin: 30px;
     }
+}
+
+.test {
+    background-color: aqua;
 }

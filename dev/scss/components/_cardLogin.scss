@@ -1,5 +1,5 @@
-
 @use '../abstracts/vars';
+@use '../abstracts/media-queries';
 
 .card-login{
     width: 50%;
@@ -10,7 +10,7 @@
     margin: 5vh auto;
     border-radius: 5vh;
 
-    @media screen and (max-width: 768px) {
+    @include media-queries.respond-to(vars.$phone) { 
         width: 90%; 
         margin-top: 2vh;
     }

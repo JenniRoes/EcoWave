@@ -1,30 +1,28 @@
 @use '../abstracts/vars';
+@use '../abstracts/media-queries';
 
-.camp-section{
-   // margin: 3rem;
-}
 .camp-title-div{
     font-family: vars.$ff-primary;
     display: flex;
+
+    @include media-queries.respond-to(vars.$phone){
+            justify-content: center;
+    }
 }
 
 .section-camp-title{
     color: vars.$clr-green-100;
-}
 
-/*MEDIA QUERY*/
-@media (max-width: 768px) {
-    .camp-section{
-        //margin: 2rem;
-    }
-
-    .camp-title-div{
-        justify-content: center;
-    }
-    
-    .section-camp-title{
+    @include media-queries.respond-to(vars.$phone){
         margin: 0;
         margin-bottom: 1rem;
         font-size: vars.$fs-mdl;
+    }
+}
+
+@include media-queries.respond-to(vars.$phone){
+    .responsive-mobile {
+        display: flex;
+        flex-wrap: wrap-reverse;
     }
 }

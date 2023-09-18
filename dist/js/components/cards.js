@@ -1,7 +1,7 @@
 app.component('cards', {
     template:
       /*html*/
-      `    <!--footer-->
+      `  
       <div class="card border border-0 rounded mb-5">
       <div class="card-flex row g-0">
         <div class="col-md-7">

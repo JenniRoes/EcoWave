@@ -2,15 +2,17 @@
 @use './scss/vendor/bootstrap/bootstrap.scss';
 
 //sass files
+@use './scss/abstracts/vars';
+@use './scss/abstracts/media-queries';
 @use './scss/base/base';
 @use './scss/base/typography';
-@use './scss/abstracts/vars';
-@use './scss/components/media.scss';
-@use './scss/components/input';
 @use './scss/components/button';
-@use './scss/components/footer';
-@use './scss/vendor/_media-queries.scss';
 @use './scss/components/camps_section';
 @use './scss/components/card';
-@use './scss/components/detalle';
 @use './scss/components/cardLogin';
+@use './scss/components/input';
+@use './scss/components/media.scss';
+@use './scss/components/detalle';
+@use './scss/layout/footer';
+@use './scss/layout/navbar';
+

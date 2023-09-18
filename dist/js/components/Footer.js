@@ -9,9 +9,9 @@ app.component('footer-nav', {
 
 
     <div class="d-flex justify-content-start m-footer">
-    <a class="nav-link footer-links m-footer-txt" href="#">Inicio</a>
+    <a class="nav-link footer-links m-footer-txt" href="./home.html">Inicio</a>
     <a class="nav-link footer-links m-footer-txt" href="#">Blog</a>
-    <a class="nav-link footer-links" href="#">perfil</a>
+    <a class="nav-link footer-links" href="#">Perfil</a>
     </div>
 
     <div class="d-flex justify-content-center">
