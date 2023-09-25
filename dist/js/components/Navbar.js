@@ -26,7 +26,7 @@ app.component('navbar', {
                   <li><a class="no-link navbar-item" href="#">Blog</a></li>
                   <li><a class="no-link navbar-item" href="#">Perfil</a></li>
               </ul>
-              <button class="btn-login">Iniciar sesión <span><img src="./imgs/icons/arrow.svg" alt="flecha"></span></button>
+              <button class="btn-login"><a class="color-white" href="./login.html">Iniciar sesión </a><span><img src="./imgs/icons/arrow.svg" alt="flecha"></span></button>
   
           </div>
       </nav>`

@@ -1,6 +1,7 @@
 @use '../abstracts/vars';
 @use '../abstracts/media-queries';
 
+
 .m-footer {
     margin-left: 65px;
 
@@ -61,7 +62,7 @@
     @include media-queries.respond-to(vars.$phone) {
         flex-direction: column;
         align-items: end;
-        margin-right: 30px;
+        padding-right: 30px;
         margin-bottom: 10px;
         gap: 10px;
     }

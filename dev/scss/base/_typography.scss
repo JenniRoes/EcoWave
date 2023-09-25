@@ -8,9 +8,9 @@
     font-weight: vars.$fw-reg;
     margin-top: 69px;
 
-    @include media-queries.respond-to(vars.$phone){
-            font-size: vars.$fs-sm;
-            margin-top: 30px;
+    @include media-queries.respond-to(vars.$phone) {
+        font-size: vars.$fs-sm;
+        margin-top: 30px;
     }
 }
 
@@ -18,33 +18,36 @@
     text-decoration: none;
 }
 
-.banner-title{
+.banner-title {
     font-size: vars.$fs-xlg;
     color: vars.$clr-white;
-    @include media-queries.respond-to(vars.$phone){
+
+    @include media-queries.respond-to(vars.$phone) {
         font-size: vars.$fs-md;
     }
 }
 
-.banner-text{
+.banner-text {
     font-size: vars.$fs-mdl;
     color: vars.$clr-white;
-    @include media-queries.respond-to(vars.$phone){
+
+    @include media-queries.respond-to(vars.$phone) {
         font-size: vars.$fs-sm;
     }
 }
 
-.banner-p{
+.banner-p {
     position: absolute;
     padding-left: 100px;
     padding-top: 100px;
-    @include media-queries.respond-to(vars.$phone){
+
+    @include media-queries.respond-to(vars.$phone) {
         padding-left: 20px;
         padding-top: 20px;
     }
 }
 
-.login-title{
+.login-title {
     color: vars.$clr-black;
     font-family: vars.$ff-primary;
     font-size: vars.$fs-lg;
@@ -55,7 +58,7 @@
 
 }
 
-.login-text{
+.login-text {
     color: vars.$clr-black;
     font-family: vars.$ff-primary;
     font-size: vars.$fs-rg;
@@ -65,7 +68,7 @@
 
 }
 
-.login-input{
+.login-input {
     background-color: vars.$clr-gray-50;
     color: vars.$clr-black;
     font-family: vars.$ff-primary;
@@ -76,7 +79,7 @@
     margin-top: 3vh;
 }
 
-.sidecard-title{
+.sidecard-title {
     color: #000;
     font-family: Inter;
     font-size: 24px;
@@ -84,20 +87,34 @@
     font-weight: 500;
     line-height: normal;
     text-decoration-line: underline;
-    @include media-queries.respond-to(vars.$phone){
+
+    @include media-queries.respond-to(vars.$phone) {
         font-size: 20px;
     }
 }
 
-.sidecard-subtitle{
+.sidecard-subtitle {
     color: #686868;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    @include media-queries.respond-to(vars.$phone){
+
+    @include media-queries.respond-to(vars.$phone) {
         font-size: 15px;
+    }
+}
+
+.color-white {
+    text-decoration: none;
+    color: vars.$clr-white;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-mdl;
+    font-weight: vars.$fw-reg;
+
+    @include media-queries.respond-to(vars.$phone) {
+        font-size: vars.$fs-xs;
     }
 }
 

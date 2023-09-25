@@ -13343,6 +13343,8 @@ textarea.form-control-lg {
 body {
   font-family: "Inter", sans-serif;
   width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .m-start {
@@ -13512,6 +13514,19 @@ body {
   }
 }
 
+.color-white {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 25px;
+  font-weight: 500;
+}
+@media only screen and (max-width: 480px) {
+  .color-white {
+    font-size: 14px;
+  }
+}
+
 @media screen and ((max-width: 480px)) {
   .mt-mobile {
     margin-top: 20px;
@@ -13525,10 +13540,6 @@ body {
   background: #9FCE99;
   margin-right: 75px;
   margin-left: 54px;
-  color: #ffffff;
-  font-family: "Inter", sans-serif;
-  font-size: 25px;
-  font-weight: 500;
 }
 @media only screen and (max-width: 480px) {
   .btn-login {
@@ -13537,7 +13548,6 @@ body {
     margin-right: 0px;
     margin-left: 0px;
     margin-top: 30px;
-    font-size: 14px;
     margin-right: 0px;
   }
 }
@@ -13569,7 +13579,15 @@ body {
     width: 8rem;
     height: 2rem;
     border-radius: 0.7rem;
-    margin-top: 1rem;
+    margin: auto;
+    margin-top: 40px;
+    padding: 1.5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
@@ -13836,12 +13854,10 @@ body {
     -webkit-box-flex: 0;
         -ms-flex: none;
             flex: none;
-    width: 100%;
-    margin-top: 20px;
-    padding-right: 70px;
-    margin-left: 40px;
-    text-align: start;
+    width: 90%;
+    margin: 20px 40px;
     padding-left: 0px;
+    padding-right: 20px;
   }
 }
 
@@ -14014,7 +14030,7 @@ body {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: end;
-    margin-right: 30px;
+    padding-right: 30px;
     margin-bottom: 10px;
     gap: 10px;
   }
