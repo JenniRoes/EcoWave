@@ -11,13 +11,13 @@
 	font-family: 'Inter', sans-serif;
 
 	@include media-queries.respond-to(vars.$phone) {
-
-		flex-direction: column;
+		flex-direction: column-reverse;
+		padding: auto;
 	}
 }
 
 .titulo {
-	font-weight: bold;
+	font-weight: vars.$fw-bold;
 	flex: 1;
 	text-align: left;
 	margin: 0;
@@ -25,10 +25,11 @@
 	padding-left: 150px;
 
 	@include media-queries.respond-to(vars.$phone) {
-
 		flex: none;
-		width: 100%;
-		padding-left: 0.1;
+		width: 85%;
+		text-align: center;
+		padding-left: 0px;
+		margin: auto;
 	}
 }
 
@@ -36,36 +37,53 @@
 	text-align: left;
 	padding-top: 20px;
 	color: #686868;
-	border-right: 2px solid #333;
 	flex: 1;
 	text-align: left;
 	margin: 0;
 	padding-left: 150px;
+	margin-bottom: 20px;
 
 	@include media-queries.respond-to(vars.$phone) {
 		flex: none;
 		width: 100%;
-		padding-left: 0.1;
+		margin-top: 20px;
+		padding-right: 70px;
+		margin-left: 40px;
+		text-align: start;
+		padding-left: 0px;
 	}
 }
 
 .columna-izquierda {
 	flex: 1;
-	padding: 20px;
-	border-top: 2px solid #ccc;
 
 	@include media-queries.respond-to(vars.$phone) {
-		border-top: none;
+		p {
+			text-align: center;
+		}
+
+		iframe {
+			display: flex;
+			margin: 0px 40px;
+			margin-bottom: 20px;
+		}
 	}
 }
 
 .columna-derecha {
-	flex: 3;
+	flex: 2;
 	padding: 20px;
-	border-top: 2px solid #ccc;
+	justify-content: center;
+}
+
+.columna-derecha img {
+	width: 702px;
+	height: 225px;
+	object-fit: cover;
 
 	@include media-queries.respond-to(vars.$phone) {
-		border-top: none;
+		width: 342px;
+		height: 142px;
 	}
 }
 
@@ -75,6 +93,11 @@
 	font-size: 24px;
 	padding-top: 20px;
 	padding-bottom: 20px;
+
+	@include media-queries.respond-to(vars.$phone) {
+		margin: auto;
+		text-align: center;
+	}
 }
 
 .subtitulo-principal {
@@ -84,4 +107,26 @@
 	font-family: Helvetica, sans-serif;
 	padding-top: 20px;
 	padding-bottom: 20px;
+}
+
+.border-decoration {
+	border-top: 2px solid #ccc;
+
+	@include media-queries.respond-to(vars.$phone) {
+		border-top: none;
+	}
+}
+
+.gap-columnas {
+	gap: 120px;
+
+	@include media-queries.respond-to(vars.$phone) {
+		gap: 10px;
+	}
+}
+
+.text-description {
+	display: flex;
+	align-content: center;
+	flex-direction: column;
 }

@@ -42,6 +42,7 @@
     background: none;
     font-family: vars.$ff-primary;
     color: vars.$clr-lightblue;
+    text-decoration: none;
 
     @include media-queries.respond-to(vars.$phone){
             background: vars.$clr-lightblue;
