@@ -20,9 +20,3 @@
     }
 }
 
-@include media-queries.respond-to(vars.$phone){
-    .responsive-mobile {
-        display: flex;
-        flex-wrap: wrap-reverse;
-    }
-}

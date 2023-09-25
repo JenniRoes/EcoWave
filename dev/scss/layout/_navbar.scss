@@ -2,11 +2,9 @@
 @use '../abstracts/media-queries';
 
 nav {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin: 60px 75px;
 
     @include media-queries.respond-to(vars.$phone) {
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin: 16px 0px;
     }
 }

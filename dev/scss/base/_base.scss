@@ -35,6 +35,21 @@ body {
     }
 }
 
-.test {
-    background-color: aqua;
+.gap-cards {
+    gap: 100px;
+
+    @include media-queries.respond-to(vars.$phone){
+        flex-direction: column-reverse;
+        gap: 40px;
+    }
+}
+@include media-queries.respond-to(vars.$phone){
+    .col-3 {
+        width: 90%;
+        margin: auto;
+    }
+    .col-7 {
+        width: 95%;
+        margin: auto;
+    }
 }

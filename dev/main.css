@@ -13377,10 +13377,29 @@ body {
   }
 }
 
-.test {
-  background-color: aqua;
+.gap-cards {
+  gap: 100px;
+}
+@media only screen and (max-width: 480px) {
+  .gap-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 40px;
+  }
 }
 
+@media only screen and (max-width: 480px) {
+  .col-3 {
+    width: 90%;
+    margin: auto;
+  }
+  .col-7 {
+    width: 95%;
+    margin: auto;
+  }
+}
 .navbar-item {
   color: #000000;
   font-family: "Inter", sans-serif;
@@ -13575,15 +13594,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 480px) {
-  .responsive-mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap-reverse;
-        flex-wrap: wrap-reverse;
-  }
-}
 .camp-date {
   font-family: "Inter", sans-serif;
   color: #6EBA68;
@@ -13729,8 +13739,10 @@ body {
   }
 }
 .logo {
-  margin-left: 75px;
+  margin-left: 55px;
   margin-right: 41px;
+  width: 272px;
+  height: 72px;
 }
 @media only screen and (max-width: 480px) {
   .logo {
@@ -13754,8 +13766,11 @@ body {
 }
 
 .navbar-toggler-icon {
-  margin-right: 20px;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='116, 37, 57'%3e%3cpath stroke='green' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-toggler {
+  margin-right: 20px;
 }
 
 .detalle {
@@ -13863,12 +13878,17 @@ body {
 }
 
 .m-footer {
-  margin-left: 75px;
+  margin-left: 65px;
 }
 
+.footer-logo {
+  width: 352px;
+  height: 95px;
+}
 @media only screen and (max-width: 480px) {
   .footer-logo {
-    width: 65%;
+    width: 174px;
+    height: 47px;
   }
 }
 
@@ -13876,6 +13896,7 @@ body {
   background: #6EBA68;
   padding-top: 48px;
   padding-bottom: 48px;
+  margin: 0px;
 }
 @media only screen and (max-width: 480px) {
   .footer-bg {
@@ -13908,13 +13929,29 @@ body {
   }
 }
 
+.footer-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  gap: 30px;
+}
+@media only screen and (max-width: 480px) {
+  .footer-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 nav {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin: 60px 75px;
 }
 @media only screen and (max-width: 480px) {
   nav {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 16px 0px;
   }
 }
