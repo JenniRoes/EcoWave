@@ -2,9 +2,9 @@ app.component('navbar', {
     template:
       /*html*/
       `    <!--navbar-->
-      <nav id="navbar-main" class="navbar navbar-expand-lg mt-5">
+      <nav id="navbar-main" class="navbar navbar-expand-lg">
           <a class="navbar-brand logo-mobile color-header" href="#">
-              <img src="./imgs/EcoWave-02.png" class="logo img-fluid d-inline-block" alt="logotipo">
+              <img src="./imgs/logo.svg" class="logo img-fluid d-inline-block" alt="logotipo">
           </a>
           <!--search placeholder and button-->
           <div class="input-search align-items-center">
@@ -22,11 +22,11 @@ app.component('navbar', {
           <!--menu-->
           <div class="collapse navbar-collapse m-start"  id="menu">
               <ul class="navbar-nav gap-5">
-                  <li><a class="no-link navbar-item" href="./home.html">Inicio</a></li>
+                  <li class="mt-mobile"><a class="no-link navbar-item" href="./home.html">Inicio</a></li>
                   <li><a class="no-link navbar-item" href="#">Blog</a></li>
                   <li><a class="no-link navbar-item" href="#">Perfil</a></li>
               </ul>
-              <button class="btn-login me-5">Iniciar sesión <span><img src="./imgs/icons/arrow.svg" alt="flecha"></span></button>
+              <button class="btn-login"><a class="color-white" href="./login.html">Iniciar sesión </a><span><img src="./imgs/icons/arrow.svg" alt="flecha"></span></button>
   
           </div>
       </nav>`

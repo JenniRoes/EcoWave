@@ -1,0 +1,31 @@
+@use '../abstracts/vars';
+@use '../abstracts/media-queries';
+
+.camp-date{
+    font-family: vars.$ff-primary;
+    color: vars.$clr-green-100;
+}
+
+.camp-description{
+    font-family: vars.$ff-primary;
+}
+
+
+/*MEDIA QUERY*/
+@include media-queries.respond-to(vars.$phone) {
+    .card-flex{
+        flex-direction: column-reverse;
+    }
+
+    .card-body{
+        margin: 0;
+        padding-top: 1rem;
+    }
+
+    .card-responsive {
+        width: 100%;
+        margin: auto;
+        box-sizing: border-box;
+    }
+}
+  

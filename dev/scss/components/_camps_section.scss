@@ -1,0 +1,22 @@
+@use '../abstracts/vars';
+@use '../abstracts/media-queries';
+
+.camp-title-div{
+    font-family: vars.$ff-primary;
+    display: flex;
+
+    @include media-queries.respond-to(vars.$phone){
+            justify-content: center;
+    }
+}
+
+.section-camp-title{
+    color: vars.$clr-green-100;
+
+    @include media-queries.respond-to(vars.$phone){
+        margin: 0;
+        margin-bottom: 1rem;
+        font-size: vars.$fs-mdl;
+    }
+}
+

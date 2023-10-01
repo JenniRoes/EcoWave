@@ -1,0 +1,130 @@
+@use '../abstracts/vars';
+@use '../abstracts/media-queries';
+
+
+.detalle {
+	display: flex;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+	color: #686868;
+	font-family: 'Inter', sans-serif;
+
+	@include media-queries.respond-to(vars.$phone) {
+		flex-direction: column-reverse;
+		padding: auto;
+	}
+}
+
+.titulo {
+	font-weight: vars.$fw-bold;
+	flex: 1;
+	text-align: left;
+	margin: 0;
+	padding-top: 70px;
+	padding-left: 150px;
+
+	@include media-queries.respond-to(vars.$phone) {
+		flex: none;
+		width: 85%;
+		text-align: center;
+		padding-left: 0px;
+		margin: auto;
+	}
+}
+
+.autor {
+	text-align: left;
+	padding-top: 20px;
+	color: #686868;
+	flex: 1;
+	text-align: left;
+	margin: 0;
+	padding-left: 150px;
+	margin-bottom: 20px;
+
+	@include media-queries.respond-to(vars.$phone) {
+		flex: none;
+		width: 90%;
+		margin: 20px 40px;
+		padding-left: 0px;
+		padding-right: 20px;
+	}
+}
+
+.columna-izquierda {
+	flex: 1;
+
+	@include media-queries.respond-to(vars.$phone) {
+		p {
+			text-align: center;
+		}
+
+		iframe {
+			display: flex;
+			margin: 0px 40px;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+.columna-derecha {
+	flex: 2;
+	padding: 20px;
+	justify-content: center;
+}
+
+.columna-derecha img {
+	width: 702px;
+	height: 225px;
+	object-fit: cover;
+
+	@include media-queries.respond-to(vars.$phone) {
+		width: 342px;
+		height: 142px;
+	}
+}
+
+.subtitulo-verde {
+	font-weight: bold;
+	color: #6EBA68;
+	font-size: 24px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	@include media-queries.respond-to(vars.$phone) {
+		margin: auto;
+		text-align: center;
+	}
+}
+
+.subtitulo-principal {
+	color: #1E1E1E;
+	font-weight: bold;
+	font-size: 26.6px;
+	font-family: Helvetica, sans-serif;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.border-decoration {
+	border-top: 2px solid #ccc;
+
+	@include media-queries.respond-to(vars.$phone) {
+		border-top: none;
+	}
+}
+
+.gap-columnas {
+	gap: 120px;
+
+	@include media-queries.respond-to(vars.$phone) {
+		gap: 10px;
+	}
+}
+
+.text-description {
+	display: flex;
+	align-content: center;
+	flex-direction: column;
+}
