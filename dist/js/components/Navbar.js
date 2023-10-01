@@ -23,7 +23,7 @@ app.component('navbar', {
           <div class="collapse navbar-collapse m-start"  id="menu">
               <ul class="navbar-nav gap-5">
                   <li class="mt-mobile"><a class="no-link navbar-item" href="./home.html">Inicio</a></li>
-                  <li><a class="no-link navbar-item" href="#">Blog</a></li>
+                  <li><a class="no-link navbar-item" href="./blog.html">Blog</a></li>
                   <li><a class="no-link navbar-item" href="#">Perfil</a></li>
               </ul>
               <button class="btn-login"><a class="color-white" href="./login.html">Iniciar sesión </a><span><img src="./imgs/icons/arrow.svg" alt="flecha"></span></button>
