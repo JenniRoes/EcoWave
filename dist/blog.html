@@ -27,6 +27,21 @@
             <banner titulo="¡Bienvenido a nuestra sección de Blog!" descripcion="Somos una página para ayudarte a aprender sobre el reciclaje" imagen="./imgs/bannerBlog.png"></banner>
         </section>
         
+        <!--feed-->
+        <section class="d-flex justify-content-center mt-5">
+            <div class=" card border border-0">
+                <div class="camps_container">
+                    <div class="camp-title-div">
+                        <h4 class="section-camp-title fw-bold ms-3">Últimas Publicaciones</h4>
+                    </div>
+                    <div class="mt-5"> 
+                        <cards fecha="4 de Septiembre, 2023" titulo="¿Cómo aprender a reciclar?" imagen="./imgs/fotoBlog.png" :tamañoImagen="20"></cards>
+                        <cards fecha="4 de Septiembre, 2023" titulo="3 formas de organizar tu basura" imagen="./imgs/fotoBlog.png" :tamañoImagen="20"></cards>
+                        <cards fecha="4 de Septiembre, 2023" titulo="Descubre como reciclar botellas" imagen="./imgs/fotoBlog.png" :tamañoImagen="20"></cards>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!--footer-->    
         <footer>
@@ -47,6 +62,7 @@
     <script src="./js/components/Navbar.js"></script>
     <script src="./js/components/Footer.js"></script>
     <script src="./js/components/banner.js"></script>
+    <script src="./js/components/cards.js"></script>
 
     <!--mounted app-->
     <script>

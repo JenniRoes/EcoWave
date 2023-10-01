@@ -15,13 +15,17 @@ app.component('cards', {
     imagen: {
       type: String,
       default: "Imagen de publicación"
+    },
+    tamañoImagen: {
+      type: Number,
+      default: 100 
     }
 
   },
   template:
   /*html*/
   `  
-    <div class="card border border-0 rounded mb-5">
+    <div class="card border border-0 mb-5">
       <div class="card-flex row g-0">
         <div class="col-md-7">
           <div class="card-body">
@@ -31,10 +35,14 @@ app.component('cards', {
             <a class="camp-btn border-0 p-0" href="./detalle.html">Leer Más</a>
           </div>
         </div>
-        <div class="col-md-5 rounded overflow-hidden">
-          <img :src="imagen" class="img-fluid card-img" alt="fotografia de campaña">
+        <div class="col-md-5 overflow-hidden">
+          <img :src="imagen" class="img-fluid" style="{ width: tamañoImagen + '%' + ' !important' }" alt="fotografia de campaña">
         </div>
       </div>
     </div>
-  `
+  `,
+
+  created() {
+    console.log('tamañoImagen prop:', this.tamañoImagen);
+  }
   });
