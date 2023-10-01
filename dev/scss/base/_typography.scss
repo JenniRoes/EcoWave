@@ -1,5 +1,5 @@
 @use '../abstracts/vars';
-@use '../abstracts/media-queries';
+@use '../components/media-queries';
 
 .navbar-item {
     color: vars.$clr-black;
@@ -7,119 +7,93 @@
     font-size: vars.$fs-mdl;
     font-weight: vars.$fw-reg;
     margin-top: 69px;
-
-    @include media-queries.respond-to(vars.$phone) {
-        font-size: vars.$fs-sm;
-        margin-top: 30px;
-    }
 }
 
 .no-link {
     text-decoration: none;
 }
 
-.banner-title {
-    font-size: vars.$fs-xlg;
-    color: vars.$clr-white;
-
-    @include media-queries.respond-to(vars.$phone) {
-        font-size: vars.$fs-md;
-    }
-}
-
-.banner-text {
-    font-size: vars.$fs-mdl;
-    color: vars.$clr-white;
-
-    @include media-queries.respond-to(vars.$phone) {
-        font-size: vars.$fs-sm;
-    }
-}
-
-.banner-p {
-    position: absolute;
-    padding-left: 100px;
-    padding-top: 100px;
-
-    @include media-queries.respond-to(vars.$phone) {
-        padding-left: 20px;
-        padding-top: 20px;
-    }
-}
-
-.login-title {
+.user-title{
+    margin-top: 1rem;
     color: vars.$clr-black;
     font-family: vars.$ff-primary;
     font-size: vars.$fs-lg;
     font-weight: vars.$fw-bold;
-    text-align: center;
-    margin-top: 4vh;
-    margin-bottom: 8vh;
-
-}
-
-.login-text {
-    color: vars.$clr-black;
-    font-family: vars.$ff-primary;
-    font-size: vars.$fs-rg;
-    font-weight: vars.$fw-reg;
-    margin-right: 2vh;
-    margin-top: 3vh;
-
-}
-
-.login-input {
-    background-color: vars.$clr-gray-50;
-    color: vars.$clr-black;
-    font-family: vars.$ff-primary;
-    font-size: vars.$fs-rg;
-    font-weight: vars.$fw-reg;
-    border-radius: 2vh;
-    width: 40vh;
-    margin-top: 3vh;
-}
-
-.sidecard-title {
-    color: #000;
-    font-family: Inter;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-decoration-line: underline;
-
-    @include media-queries.respond-to(vars.$phone) {
-        font-size: 20px;
+    @include media-queries.respond-to(media-queries.$phone){
+        justify-content: center;
+        margin-left: 5rem;
+        margin-right: 1rem;
     }
 }
 
-.sidecard-subtitle {
-    color: #686868;
-    font-family: Inter;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
 
-    @include media-queries.respond-to(vars.$phone) {
-        font-size: 15px;
+.user-subtitle{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: vars.$clr-green-100;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-mdl;
+    font-weight: vars.$fw-bold;
+    @include media-queries.respond-to(media-queries.$phone){
+        justify-content: center;
+        margin-left: 9rem;
+        margin-right: 4rem;
     }
 }
 
-.color-white {
-    text-decoration: none;
-    color: vars.$clr-white;
+.user-subtitle-black{
+    color: vars.$clr-black;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-mdl;
+    font-weight: vars.$fw-bold;
+    @include media-queries.respond-to(media-queries.$phone){
+        justify-content: center;
+        margin-left: 9rem;
+    }
+
+}
+
+.user-small{
+    color: vars.$clr-gray-100;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-rg;
+    font-weight: vars.$fw-reg;
+    margin-top:1rem;
+    margin-bottom: 2rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        justify-content: center;
+        margin-left: 7rem;
+        margin-right: 2rem;
+    }
+}
+.user-small-green{
+    color: vars.$clr-green-50;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-rg;
+    font-weight: vars.$fw-reg;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        justify-content: center;
+        margin-left: 9rem;
+    }
+}
+
+
+.user-body{
+    color: vars.$clr-gray-100;
     font-family: vars.$ff-primary;
     font-size: vars.$fs-mdl;
     font-weight: vars.$fw-reg;
-
-    @include media-queries.respond-to(vars.$phone) {
-        font-size: vars.$fs-xs;
+    margin-top: 1rem;
+    @include media-queries.respond-to(media-queries.$phone){
+        justify-content: center;
+        font-size: vars.$fs-rg;
+        margin-left: 5rem;
+        margin-right: 1rem;
+        padding-left: -2rem;
+        padding-right: -2rem;
+        padding-bottom: 2rem;
     }
 }
 
-@media screen and (vars.$phone) {
-    .mt-mobile {
-        margin-top: 20px;
-    }
-}
