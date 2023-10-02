@@ -1,4 +1,10 @@
 app.component('navbar', {
+    methods: {
+        onClickListen(){
+            console.log("listen button");
+            this.$emit('listen');
+        },
+    },
     template:
       /*html*/
       `    <!--navbar-->
@@ -11,7 +17,7 @@ app.component('navbar', {
               <form class="d-flex" method="get" role="search">
                   <div class="input-group">
                       <input class="form-control input-search" type="text" placeholder="Buscar..." aria-label="Search">
-                      <button class="btn pe-3" type="submit"><img src="./imgs/icons/search.svg" alt="search icon"></button>
+                      <button class="btn pe-3" type="submit" v-on:click="onClickListen()"><img src="./imgs/icons/search.svg" alt="search icon"></button>
                   </div>
               </form>
           </div>
@@ -26,7 +32,7 @@ app.component('navbar', {
                   <li><a class="no-link navbar-item" href="./blog.html">Blog</a></li>
                   <li><a class="no-link navbar-item" href="#">Perfil</a></li>
               </ul>
-              <button class="btn-login"><a class="color-white" href="./login.html">Iniciar sesión </a><span><img src="./imgs/icons/arrow.svg" alt="flecha"></span></button>
+              <button class="btn-login" v-on:click="onClickListen()"><a class="color-white" href="./login.html">Iniciar sesión </a><span><img src="./imgs/icons/arrow.svg" alt="flecha"></span></button>
   
           </div>
       </nav>`

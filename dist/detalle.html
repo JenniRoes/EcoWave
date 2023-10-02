@@ -22,7 +22,7 @@
         <!--header-->
         <header>
             <!--navbar-->
-            <Navbar></Navbar>
+            <Navbar v-on:listen="onClickListenButton"></Navbar>
         </header>
 
         <!--detalle-->
@@ -41,6 +41,7 @@
     </script>
     <!--Vuejs-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/mitt/dist/mitt.umd.js"></script>
     <!--js main-->
     <script src="./js/main.js"></script>
     <!--components-->

@@ -1,4 +1,11 @@
 app.component('cards', {
+
+  methods: {
+    onClickListening(){
+        console.log("el boton esta escuchando");
+        this.$emit('listen');
+    }
+},
   props: {
     fecha: {
       type: String,
