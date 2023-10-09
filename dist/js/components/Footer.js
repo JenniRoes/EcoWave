@@ -9,7 +9,7 @@ app.component('footer-nav', {
         <div class="footer-item m-footer">
           <a class="nav-link footer-links m-footer-txt" href="./home.html">Inicio</a>
           <a class="nav-link footer-links m-footer-txt" href="./blog.html">Blog</a>
-          <a class="nav-link footer-links" href="#">Perfil</a>
+          <a class="nav-link footer-links" href="./perfil.html">Perfil</a>
         </div>
       </div>
 

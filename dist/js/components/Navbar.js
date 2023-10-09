@@ -24,7 +24,7 @@ app.component('navbar', {
               <ul class="navbar-nav gap-5">
                   <li class="mt-mobile"><a class="no-link navbar-item" href="./home.html">Inicio</a></li>
                   <li><a class="no-link navbar-item" href="./blog.html">Blog</a></li>
-                  <li><a class="no-link navbar-item" href="#">Perfil</a></li>
+                  <li><a class="no-link navbar-item" href="./perfil.html">Perfil</a></li>
               </ul>
               <button class="btn-login"><a class="color-white" href="./login.html">Iniciar sesión </a><span><img src="./imgs/icons/arrow.svg" alt="flecha"></span></button>
   

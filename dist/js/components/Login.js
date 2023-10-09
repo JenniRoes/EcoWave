@@ -40,6 +40,7 @@ app.component('login', {
         
         <a href="signup.html" class="card-link mb-5">Crear Cuenta</a>
         <a href="#" class="card-link mb-5">¿Olvidaste tu Contraseña?</a>
+       
       </div>
     </div>
   </section>

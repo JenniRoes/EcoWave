@@ -2,9 +2,26 @@
 @use './scss/vendor/bootstrap/bootstrap.scss';
 
 //sass files
+
+//abstracts
+@use './scss/abstracts/media-queries';
+@use './scss/abstracts/vars';
+//base
 @use './scss/base/base';
 @use './scss/base/typography';
-@use './scss/abstracts/vars';
-@use './scss/components/media.scss';
-@use './scss/components/input';
+//components
 @use './scss/components/button';
+@use './scss/components/camps_section';
+@use './scss/components/card';
+@use './scss/components/cardLogin';
+@use './scss/components/input';
+@use './scss/components/media';
+@use './scss/components/perfil';
+@use './scss/components/detalle';
+//layout
+@use './scss/layout/footer';
+@use './scss/layout/navbar';
+
+
+
+

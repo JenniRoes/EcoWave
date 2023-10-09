@@ -1,4 +1,4 @@
-app.component('sidecards', {
+app.component('cuenta-cards', {
   template:
     /*html*/
     `    

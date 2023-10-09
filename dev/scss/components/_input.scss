@@ -18,7 +18,7 @@
     color: vars.$clr-white;
     font-size: vars.$fs-mdl;
     padding-left: 25px;
-
+ 
     @include media-queries.respond-to(vars.$phone) {
         font-size: vars.$fs-sm;
         padding-left: 0px;
@@ -30,5 +30,21 @@
         width: 15px;
         height: 15px;
         margin-bottom: 50px;
+    }
+}
+
+.login-input {
+    background-color: vars.$clr-gray-50;
+    color: vars.$clr-black;
+    font-family: vars.$ff-primary;
+    font-size: vars.$fs-rg;
+    font-weight: vars.$fw-reg;
+    border-radius: 2vh;
+    width: 40vh;
+    margin-top: 3vh;
+
+    @include media-queries.respond-to(vars.$phone) {
+        width: 140.289px;
+        justify-content: space-between;
     }
 }
