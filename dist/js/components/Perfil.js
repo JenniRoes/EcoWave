@@ -19,6 +19,28 @@ app.component('Perfil', {
       type: String,
     }
   },
+  methods: {
+    logout(){
+      token = localStorage.getItem('token');
+
+      axios({
+        method: 'get',
+        url: 'http://localhost/primerprueba/public/api/users/logout',
+        headers: {
+          Authorization: 'Bearer ${token}'
+        }
+      })
+      .then(
+        (response) => {
+          window.location.href = 'http://localhost/EcoWave/dist/login.html'
+        }
+      )
+      .catch (
+        error => console.log(error)
+      );
+    }
+      
+  },
     template:
       /*html*/
       `  		
@@ -37,7 +59,7 @@ app.component('Perfil', {
         <h2 class="user-body col-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a erat eget magna.</h2>
         </li>
       <li class="nav-item">
-        <button class="btn-perfil me-5">Editar perfil</button>
+        <a href="#" class="btn-perfil me-5" @click= "logout">Cerrar sesión</a>
         </li>
       </ul>
       </section>

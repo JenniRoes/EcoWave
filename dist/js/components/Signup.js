@@ -1,5 +1,29 @@
 app.component('signup', {
+  methods: {
+    registerUser() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const validation = document.getElementById('validation').value;
 
+        // Crear el objeto de datos a enviar en la solicitud POST
+        const data = {
+            name: name,
+            email: email,
+            password: password,
+            confirm_password: validation
+        };
+
+        axios.post('http://localhost/laravel_ecowave/example-app/public/api/register', data)
+            .then(response => {    
+              alert("Se ha registrado correctamente");
+                window.location.href = 'http://localhost/EcoWave/dist/login.html';
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+},
 
     template:
       /*html*/
@@ -18,7 +42,7 @@ app.component('signup', {
                 <h1 class="login-text text-start">Nombre:</h1>
               </div>
               <div class="mb-2 ">
-                <input type="name" class="form-control login-input ms-lg-5" id="1" aria-describedby="nameHelp">
+                <input type="name" class="form-control login-input ms-lg-5" id="name" aria-describedby="nameHelp">
               </div>
             </div>
 
@@ -28,7 +52,7 @@ app.component('signup', {
               <h1 class="login-text text-start">Correo Electrónico:</h1>
             </div>
             <div class="mb-2">
-              <input type="email" class="form-control login-input" id="1" aria-describedby="emailHelp">
+              <input type="email" class="form-control login-input" id="email" aria-describedby="emailHelp">
             </div>
           </div>
   
@@ -38,15 +62,21 @@ app.component('signup', {
                 <h1 class="login-text text-start">Contraseña:</h1>
               </div>
               <div class="mb-2">
-                <input type="password" class="form-control login-input ms-lg-5" id="1" aria-describedby="password">
+                <input type="password" class="form-control login-input ms-lg-5" id="password" aria-describedby="password">
+              </div>
+
+              <div class="mb-2">
+                <h1 class="login-text text-start">Verifique su contraseña:</h1>
+              </div>
+              <div class="mb-2">
+                <input type="password" class="form-control login-input ms-lg-5" id="validation" aria-describedby="password">
               </div>
             </div>
   
               <div class="d-flex justify-content-center align-items-center mt-5 mb-5">
-              <a href="home.html" class="btn-access">Crear Cuenta</a>
+              <a href="#" class="btn-access" @click="registerUser">Crear Cuenta</a>
               </div>
           </form>
-  
 
         </div>
       </div>
