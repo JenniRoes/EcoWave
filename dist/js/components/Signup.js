@@ -15,11 +15,12 @@ app.component('signup', {
         };
 
         axios.post('http://localhost/laravel_ecowave/example-app/public/api/register', data)
-            .then(response => {    
+            .then(response => {   
               alert("Se ha registrado correctamente");
-                window.location.href = 'http://localhost/EcoWave/dist/login.html';
+              window.location.href = 'http://localhost/EcoWave/dist/login.html';
             })
             .catch(error => {
+              
                 console.error(error);
             });
     }
@@ -32,9 +33,6 @@ app.component('signup', {
       <div class="card card-login">
         <div class="card-body text-center">
           <form>
-
-          
-  
             <h5 class="card-title login-title">Regístrate</h5>
             
             <div class="d-flex justify-content-center align-items-center flex-wrap">

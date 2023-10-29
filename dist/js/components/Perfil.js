@@ -21,13 +21,13 @@ app.component('Perfil', {
   },
   methods: {
     logout(){
-      token = localStorage.getItem('token');
+      const token = localStorage.getItem('token');
 
       axios({
-        method: 'get',
-        url: 'http://localhost/primerprueba/public/api/users/logout',
+        method: 'post',
+        url: 'http://localhost/laravel_ecowave/example-app/public/api/logout',
         headers: {
-          Authorization: 'Bearer ${token}'
+          Authorization: `Bearer ${token}`
         }
       })
       .then(
@@ -46,30 +46,26 @@ app.component('Perfil', {
       `  		
       <!--perfil-->
       <section class="row">
-      <container class="container-fluid">
-      <ul class="nav justify-content-center mt-5 me-5 ms-1"> 
-      <li class="nav-item">
-      <img v-bind:src="user_img" alt="user_img" class="pe-4  user-img">
-      </li>
-      <li class="nav-item">
+        <container class="container-fluid">
+          <ul class="nav justify-content-center mt-5 me-5 ms-1"> 
+            <li class="nav-item">
+              <img v-bind:src="user_img" alt="user_img" class="pe-4  user-img">
+            </li>
+            <li class="nav-item">
+              <!-- header profile -->
+               <h1 class="user-title">{{ user }}</h1>
+               <h3 class="user-small">@{{ username }}</h3>
+               <h2 class="user-body col-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a erat eget magna.</h2>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="btn-perfil me-5" @click= "logout">Cerrar sesión</a>
+            </li>
+          </ul>
 
-      <!-- header profile -->
-        <h1 class="user-title">{{ user }}</h1>
-        <h3 class="user-small">@{{ username }}</h3>
-        <h2 class="user-body col-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a erat eget magna.</h2>
-        </li>
-      <li class="nav-item">
-        <a href="#" class="btn-perfil me-5" @click= "logout">Cerrar sesión</a>
-        </li>
-      </ul>
-      </section>
-
-      <div>
+       <div>
         <img class="img-fluid center" src="./imgs/line.png" alt="div">
-      </div>
-
- 
-  
+       </div>
+        </container>
       </section>
       `
   });

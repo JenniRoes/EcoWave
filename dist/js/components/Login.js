@@ -9,7 +9,7 @@ app.component('login', {
         password: password
       })
       .then(response => {
-        localStorage.setItem('token', response.data.accessToken);
+        localStorage.setItem('token', response.data.data.token); 
         window.location.href = 'http://localhost/EcoWave/dist/home.html';
       })
       .catch(error => {

@@ -42,7 +42,4 @@ app.component('cards', {
     </div>
   `,
 
-  created() {
-    console.log('tamañoImagen prop:', this.tamañoImagen);
-  }
   });
