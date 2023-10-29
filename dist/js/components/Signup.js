@@ -62,15 +62,16 @@ app.component('signup', {
               <div class="mb-2">
                 <input type="password" class="form-control login-input ms-lg-5" id="password" aria-describedby="password">
               </div>
+            </div>
 
-              <div class="mb-2">
-                <h1 class="login-text text-start">Verifique su contraseña:</h1>
-              </div>
-              <div class="mb-2">
-                <input type="password" class="form-control login-input ms-lg-5" id="validation" aria-describedby="password">
+            <div class="d-flex justify-content-center align-items-center flex-wrap">
+               <div class="mb-2">
+                 <h1 class="login-text text-start">Verifique su contraseña:</h1>
+               </div>
+               <div class="mb-2">
+                 <input type="password" class="form-control login-input ms-lg-5" id="validation" aria-describedby="password">
               </div>
             </div>
-  
               <div class="d-flex justify-content-center align-items-center mt-5 mb-5">
               <a href="#" class="btn-access" @click="registerUser">Crear Cuenta</a>
               </div>

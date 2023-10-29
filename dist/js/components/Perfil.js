@@ -58,7 +58,7 @@ app.component('Perfil', {
                <h2 class="user-body col-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a erat eget magna.</h2>
             </li>
             <li class="nav-item">
-              <a href="#" class="btn-perfil me-5" @click= "logout">Cerrar sesión</a>
+              <a href="#" class="btn-perfil no-link" @click= "logout">Cerrar sesión</a>
             </li>
           </ul>
 
