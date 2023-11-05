@@ -4,6 +4,7 @@ app.component('login', {
       const user = document.getElementById('user').value;
       const password = document.getElementById('password').value;
 
+
       axios.post('http://localhost/laravel_ecowave/example-app/public/api/login', {
         email: user,
         password: password
