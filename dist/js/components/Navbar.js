@@ -8,9 +8,9 @@ app.component('navbar', {
           </a>
           <!--search placeholder and button-->
           <div class="input-search align-items-center">
-              <form class="d-flex" method="get" role="search">
+              <form class="d-flex" method="get" action="search.html" role="search">
                   <div class="input-group">
-                      <input class="form-control input-search" type="text" placeholder="Buscar..." aria-label="Search">
+                      <input v-model="inputValue" class="form-control input-search" type="text" name="keyword" placeholder="Buscar..." aria-label="Search">
                       <button class="btn pe-3" type="submit"><img src="./imgs/icons/search.svg" alt="search icon"></button>
                   </div>
               </form>
