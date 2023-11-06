@@ -7,7 +7,6 @@ const app = Vue.createApp({
     mounted() {
         axios.get('http://localhost/laravel_ecowave/example-app/public/api/publicacion/index')
             .then(response => {
-
              
                 let publicacion = response.data.data;
 
@@ -15,12 +14,10 @@ const app = Vue.createApp({
                     this.publicaciones.push({
                         id: element.id,
                         title: element.title,
-                        subtitle: element.subtitle,
-                        description: element.description
+                        description: element.description,
+                        created_at: element.created_at
                     })
                 });
-
-                console.log(this.publicaciones);
             })
             .catch(error => {
                 console.error(error);
