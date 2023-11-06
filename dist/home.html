@@ -26,7 +26,9 @@
 
         <!--banner-->
         <section>
-            <banner titulo="¡Bienvenido a EcoWave!" descripcion="Somos una página para encontrar puntos de reciclaje y campañas cerca de tu localidad" imagen="./imgs/banner.png"></banner>
+            <banner titulo="¡Bienvenido a EcoWave!"
+                descripcion="Somos una página para encontrar puntos de reciclaje y campañas cerca de tu localidad"
+                imagen="./imgs/banner.png"></banner>
         </section>
 
         <!--feed-->
@@ -42,10 +44,10 @@
                     <div class="camp-title-div">
                         <h5 class="section-camp-title fw-bold ms-3">Campañas</h5>
                     </div>
-                    <div class="camps-card-container"> <!--Contenedor de cards-->
-                        <cards fecha="4 de Septiembre, 2023" titulo="Campaña de Reciclaje en el Cocal de Puntarenas" imagen="./imgs/fotoCampanna.png"></cards>
-                        <cards fecha="4 de Septiembre, 2023" titulo="Campaña de Reciclaje en el Cocal de Puntarenas" imagen="./imgs/fotoCampanna.png"></cards>
-                        <cards fecha="4 de Septiembre, 2023" titulo="Campaña de Reciclaje en el Cocal de Puntarenas" imagen="./imgs/fotoCampanna.png"></cards>
+                    <div class="camps-card-container" v-for="(item, index) in publicaciones"> <!--Contenedor de cards-->
+                        <cards fecha="4 de Septiembre, 2023" :title="item.title"
+                            :description="item.description" photo ="./imgs/fotoCampanna.png"></cards>
+
                     </div>
                 </div>
             </div>
@@ -72,7 +74,8 @@
     <script src="./js/components/banner.js"></script>
     <script src="./js/components/cards.js"></script>
     <script src="./js/components/sidecard.js"></script>
-
+    <!--Axios-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!--mounted app-->
     <script>
         const mountedApp = app.mount("#app");

@@ -32,7 +32,6 @@ axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
         })
         .catch(error => {
           alert("Error");
-          console.log(token)
 
             console.error(error);
         });
