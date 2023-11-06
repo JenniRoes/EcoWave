@@ -6,10 +6,10 @@ app.component('Perfil', {
     user: {
       type: String,
     },
-    username: {
+    email: {
       type: String,
     },
-    creation_time: {
+    created_at: {
       type: String,
     },
     active_campain_number: {
@@ -17,6 +17,10 @@ app.component('Perfil', {
     },
     ubication: {
       type: String,
+    },
+    tipo:{
+      type: String,
+      
     }
   },
   methods: {
@@ -54,8 +58,8 @@ app.component('Perfil', {
             <li class="nav-item">
               <!-- header profile -->
                <h1 class="user-title">{{ user }}</h1>
-               <h3 class="user-small">@{{ username }}</h3>
-               <h2 class="user-body col-7">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a erat eget magna.</h2>
+               <h3 class="user-small">{{ email }}</h3>
+               <h2 class="user-body col-7">{{ tipo }}</h2>
             </li>
             <li class="nav-item">
               <a href="#" class="btn-perfil no-link" @click= "logout">Cerrar sesión</a>

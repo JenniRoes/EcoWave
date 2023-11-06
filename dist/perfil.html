@@ -27,15 +27,15 @@
 
         <!--perfil-->
         <section>
-            <Perfil user_img="./imgs/accountCircle.png" user="Laura Green" username="lauragreen1" creation_time="seis meses" ubication="Barranca, Puntarenas" 
+            <Perfil user_img="./imgs/accountCircle.png" :user="username" :email="email" :tipo="tipo" ubication="Barranca, Puntarenas" 
             active_campain_number="3"></Perfil>
         </section>
 
         <!--feed-->
         <section class="d-flex m-sidecard gap-cards justify-content-center">
             <div class="col-3">
-                <h5 class="section-camp-title fw-bold">Información de la cuenta</h5>
-                <cuenta-cards class="mb-5"></cuenta-cards>
+                <h5 class="section-camp-title fw-bold" >Información de la cuenta</h5>
+                <cuenta-cards class="mb-5" :created_at="created_at"></cuenta-cards>
                 <h5 class="section-camp-title fw-bold">Campañas guardadas</h5>
                 <sidecard class="mb-5"></sidecard>
                 <sidecard class="mb-5"></sidecard>
@@ -77,6 +77,7 @@
     <script src="./js/components/cards.js"></script>
     <script src="./js/components/sidecard.js"></script>
     <script src="./js/components/CuentaCards.js"></script>
+    <script src="./js/components/Login.js"></script>
     <!--Axios-->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!--mounted app-->
