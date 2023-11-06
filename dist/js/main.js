@@ -1,7 +1,11 @@
 const app = Vue.createApp({
     data() {
         return {
-            publicaciones: []
+            publicaciones: [],
+            tipo : localStorage.getItem('tipo'),
+            username: localStorage.getItem('name'),
+            email: localStorage.getItem('email'),
+            created_at: localStorage.getItem('created_at')
         }
     },
     mounted() {
@@ -24,5 +28,4 @@ const app = Vue.createApp({
             });
     },
 });
-
-
+ 

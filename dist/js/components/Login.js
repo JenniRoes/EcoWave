@@ -1,5 +1,10 @@
 app.component('login', {
-  methods: {
+  data() {
+    return {
+        
+    }
+},
+ methods: {
     loginUser() {
       const user = document.getElementById('user').value;
       const password = document.getElementById('password').value;
@@ -12,6 +17,20 @@ app.component('login', {
       .then(response => {
         localStorage.setItem('token', response.data.data.token); 
         window.location.href = 'http://localhost/EcoWave/dist/home.html';
+        localStorage.setItem('name', response.data.data.name);
+        localStorage.setItem('email', response.data.data.email);
+        localStorage.setItem('created_at', response.data.data.created_at);
+        if(response.data.data.type==0){
+            texto="eres un viewer"
+        }
+        if(response.data.data.type==1){
+          texto="eres un organizador"
+        }
+        localStorage.setItem('tipo', texto);
+
+        
+        
+
       })
       .catch(error => {
         console.log(error);
