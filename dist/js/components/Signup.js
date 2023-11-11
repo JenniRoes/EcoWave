@@ -36,40 +36,40 @@ app.component('signup', {
             <h5 class="card-title login-title">Regístrate</h5>
             
             <div class="d-flex justify-content-center align-items-center flex-wrap">
-              <div class="mb-2">
+              <div class="mb-2 col-5">
                 <h1 class="login-text text-start">Nombre:</h1>
               </div>
-              <div class="mb-2 ">
-                <input type="name" class="form-control login-input ms-lg-5" id="name" aria-describedby="nameHelp">
+              <div class="mb-2 col-7">
+                <input type="name" class="form-control login-input" id="name" aria-describedby="nameHelp">
               </div>
             </div>
 
 
             <div class="d-flex justify-content-center align-items-center flex-wrap">
-            <div class="mb-2">
+            <div class="mb-2 col-5">
               <h1 class="login-text text-start">Correo Electrónico:</h1>
             </div>
-            <div class="mb-2">
+            <div class="mb-2 col-7">
               <input type="email" class="form-control login-input" id="email" aria-describedby="emailHelp">
             </div>
           </div>
   
   
             <div class="d-flex justify-content-center align-items-center flex-wrap">
-              <div class="mb-2">
+              <div class="mb-2 col-5">
                 <h1 class="login-text text-start">Contraseña:</h1>
               </div>
-              <div class="mb-2">
-                <input type="password" class="form-control login-input ms-lg-5" id="password" aria-describedby="password">
+              <div class="mb-2 col-7">
+                <input type="password" class="form-control login-input " id="password" aria-describedby="password">
               </div>
             </div>
 
             <div class="d-flex justify-content-center align-items-center flex-wrap">
-               <div class="mb-2">
+               <div class="mb-2 col-5">
                  <h1 class="login-text text-start">Verifique su contraseña:</h1>
                </div>
-               <div class="mb-2">
-                 <input type="password" class="form-control login-input ms-lg-5" id="validation" aria-describedby="password">
+               <div class="mb-2 col-7">
+                 <input type="password" class="form-control login-input " id="validation" aria-describedby="password">
               </div>
             </div>
               <div class="d-flex justify-content-center align-items-center mt-5 mb-5">
