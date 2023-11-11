@@ -11,12 +11,12 @@
     margin-left: 54px;
 
     @include media-queries.respond-to(vars.$phone) {
-            width: 120px;
-            height: 26px;
-            margin-right: 0px;
-            margin-left: 0px;
-            margin-top: 30px;
-            margin-right: 0px;
+        width: 120px;
+        height: 26px;
+        margin-right: 0px;
+        margin-left: 0px;
+        margin-top: 30px;
+        margin-right: 0px;
     }
 }
 
@@ -29,27 +29,56 @@
     background: vars.$clr-green-100;
 
     @include media-queries.respond-to(vars.$phone) {
-            display: none;
+        display: none;
     }
 }
 
-.camp-btn{
+.camp-btn {
     background: none;
     font-family: vars.$ff-primary;
     color: vars.$clr-lightblue;
     text-decoration: none;
+    font-weight: 600;
 
-    @include media-queries.respond-to(vars.$phone){
-            background: vars.$clr-lightblue;
-            color: vars.$clr-white;
-            width: 8rem;
-            height: 2rem;
-            border-radius: .7rem;
-            margin: auto;
-            margin-top: 40px;
-            padding: 1.5px;
-            display: flex;
-             justify-content: center;
-            
+    @include media-queries.respond-to(vars.$phone) {
+        background: vars.$clr-lightblue;
+        color: vars.$clr-white;
+        width: 8rem;
+        height: 2rem;
+        border-radius: .7rem;
+        margin: auto;
+        margin-top: 40px;
+        padding: 1.5px;
+        display: flex;
+        justify-content: center;
+
     }
+}
+
+.btn-post {
+    display: flex;
+    justify-content: center;
+    width: 260px;
+    height: 49.836px;
+    border-radius: 57.31px;
+    align-items: center;
+    background: vars.$clr-green-100;
+    color: vars.$clr-white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-editar {
+    font-size: 16px;
+    color: vars.$clr-green-100;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn-eliminar {
+    font-size: 16px;
+    color: #C24646;
+    font-weight: 600;
+    text-decoration: none;
 }

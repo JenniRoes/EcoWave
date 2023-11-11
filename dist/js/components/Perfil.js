@@ -51,20 +51,23 @@ app.component('Perfil', {
       <!--perfil-->
       <section class="row">
         <container class="container-fluid">
-          <ul class="nav justify-content-center mt-5 me-5 ms-1"> 
-            <li class="nav-item">
-              <img v-bind:src="user_img" alt="user_img" class="pe-4  user-img">
-            </li>
-            <li class="nav-item">
+          <section class="mt-5 me-5 m-perfil"> 
+            <div class="row">
+              <div class="col-2">
+                <img v-bind:src="user_img" alt="user_img" class="user-img">
+              </div>
               <!-- header profile -->
-               <h1 class="user-title">{{ user }}</h1>
-               <h3 class="user-small">{{ email }}</h3>
-               <h2 class="user-body col-7">{{ tipo }}</h2>
-            </li>
-            <li class="nav-item">
+              <div class="col-5">
+                <h1 class="user-title">{{ user }}</h1>
+                <h3 class="user-small">{{ email }}</h3>
+                <h2 class="user-body">{{ tipo }}</h2>
+              </div>
+              <div class="col-3 m-logout">
               <a href="#" class="btn-perfil no-link" @click= "logout">Cerrar sesión</a>
-            </li>
-          </ul>
+              </div>
+            </div>
+          
+          </section>
 
        <div>
         <img class="img-fluid center" src="./imgs/line.png" alt="div">

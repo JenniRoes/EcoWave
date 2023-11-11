@@ -13360,6 +13360,14 @@ body {
   margin-right: 5px;
 }
 
+.m-perfil {
+  margin-left: 150px;
+}
+
+.m-logout {
+  margin-left: 210px;
+}
+
 .login-reg-bg {
   width: 100%;
   height: 100%;
@@ -13677,6 +13685,7 @@ body {
   font-family: "Inter", sans-serif;
   color: #5FABDF;
   text-decoration: none;
+  font-weight: 600;
 }
 @media only screen and (max-width: 480px) {
   .camp-btn {
@@ -13695,6 +13704,40 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+
+.btn-post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 260px;
+  height: 49.836px;
+  border-radius: 57.31px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #6EBA68;
+  color: #ffffff;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-editar {
+  font-size: 16px;
+  color: #6EBA68;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-eliminar {
+  font-size: 16px;
+  color: #C24646;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .camp-title-div {
@@ -13918,6 +13961,11 @@ body {
 
 .navbar-toggler {
   margin-right: 20px;
+}
+
+.user-img {
+  width: 188px;
+  height: 188px;
 }
 
 .profile-picture {

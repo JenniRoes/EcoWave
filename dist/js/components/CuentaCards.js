@@ -11,7 +11,7 @@ app.component('cuenta-cards', {
   <b-card>
     <b-card-text class="sidecard-subtitle"> 
             <div class="card-body">
-            <p class="user-small">Creada hace: {{ created_at }}</p>
+            <p class="user-small">  Fecha de creación: {{ created_at }}</p>
             <p class="user-small">Ubicación: {{ ubication }}</p>
             <p class="user-small mb-5">Campañas activas: {{active_campain_number}}</p>
           </div>
