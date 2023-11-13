@@ -34,11 +34,12 @@
                     <div class="camp-title-div">
                         <h4 class="section-camp-title fw-bold ms-3">Últimas Publicaciones</h4>
                     </div>
-                    <div class="mt-5"> 
-                        <cards fecha="4 de Septiembre, 2023" titulo="¿Cómo aprender a reciclar?" imagen="./imgs/fotoBlog.png" :tamañoImagen="20"></cards>
-                        <cards fecha="4 de Septiembre, 2023" titulo="3 formas de organizar tu basura" imagen="./imgs/fotoBlog.png" :tamañoImagen="20"></cards>
-                        <cards fecha="4 de Septiembre, 2023" titulo="Descubre como reciclar botellas" imagen="./imgs/fotoBlog.png" :tamañoImagen="20"></cards>
-                    </div>
+                    <div class="mt-5" v-for="(item, index) in posts"> 
+                        
+                        <cards :created_at="item.created_at" :title="item.title"
+                        :description="item.description" photo ="./imgs/fotoCampanna.png"></cards>
+                        
+                       </div>
                 </div>
             </div>
         </section>
@@ -63,7 +64,7 @@
     <script src="./js/components/Footer.js"></script>
     <script src="./js/components/banner.js"></script>
     <script src="./js/components/cards.js"></script>
-
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!--mounted app-->
     <script>
         const mountedApp = app.mount("#app");

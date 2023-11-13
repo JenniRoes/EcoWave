@@ -4,6 +4,10 @@ app.component('cards', {
       type: String,
       default: "Fecha de publicación"
     },
+    date: {
+      type: String,
+      default: "20/52/23"
+    },
     title: {
       type: String,
       default: "Titulo de publicación"
