@@ -44,7 +44,7 @@ app.component('cards', {
             <p class="mb-2 camp-date">{{created_at}}</p>
             <h5 class="fs-4 fw-bolder">{{title}}</h5>
             <p class="card-text mb-2">{{description}}</p>
-            <a class="camp-btn border-0 p-0" href="./detalle.html">Leer Más</a>
+            <a :href="'./detalle.html?id=' +id" class="camp-btn border-0 p-0">Leer Más</a>
             <a :href="'./editpost.html?id=' + id" class="btn-editar ms-4" v-if="guardada">Editar</a>
             <a href="#" class="btn-eliminar ms-4" v-if="guardada">Eliminar</a>
           </div>

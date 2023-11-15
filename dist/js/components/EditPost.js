@@ -14,6 +14,8 @@ data() {
         },
     }
 },
+
+
 mounted() {
   const postId = this.obtenerIdDeLaUrl();
   if (postId) {
