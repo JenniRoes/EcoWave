@@ -10,6 +10,7 @@ data() {
             ubication:"",
             author:"",
             photo:"",
+            id:""
         },
     }
 },
@@ -58,6 +59,7 @@ methods: {
     axios.put(`http://localhost/laravel_ecowave/example-app/public/api/publicacion/update/${this.postDetails.id}`, data)
       .then(response => {
         alert("Post actualizado correctamente");
+        window.location.href = 'http://localhost/EcoWave/dist/perfil.html';
       })
       .catch(error => {
         alert("Error al actualizar el post");

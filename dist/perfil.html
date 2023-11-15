@@ -49,18 +49,10 @@
                         <a class="btn-post m-auto" href="./post.html">Añadir publicación</a>
                 </div>
 
-                <div class="camps_container mt-3"> <!--Contenedor general de campañas-->
-                    <div class="camp-title-div">
-                        <h5 class="section-camp-title fw-bold ms-3 mb-3">Campañas en las que ha participado</h5>
-                    </div>
-                    <div class="camps-card-container"> <!--Contenedor de cards-->
-                        <cards fecha="4 de Septiembre, 2023" titulo="Campaña de Reciclaje en el Cocal de Puntarenas"
-                            imagen="./imgs/fotoCampanna.png" :guardada="false"></cards>
-                        <cards fecha="4 de Septiembre, 2023" titulo="Campaña de Reciclaje en el Cocal de Puntarenas"
-                            imagen="./imgs/fotoCampanna.png" :guardada="true"></cards>
-                        <cards fecha="4 de Septiembre, 2023" titulo="Campaña de Reciclaje en el Cocal de Puntarenas"
-                            imagen="./imgs/fotoCampanna.png" :guardada="true"></cards>
-                    </div>
+                <div class="camps-card-container" v-for="(item, index) in publicaciones"> <!--Contenedor de cards-->
+                    <cards :created_at="item.created_at" :title="item.title"
+                        :description="item.description" photo ="./imgs/fotoCampanna.png" :guardada="true" :id="item.id"></cards>
+
                 </div>
             </div>
         </section>

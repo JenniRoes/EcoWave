@@ -27,7 +27,7 @@ axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
           alert("Se ha agregado el post correctamente");
           //localStorage.getItem(token); 
 
-         // window.location.href = 'http://localhost/EcoWave/dist/home.html';
+         window.location.href = 'http://localhost/EcoWave/dist/home.html';
 
         })
         .catch(error => {
