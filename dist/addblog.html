@@ -18,58 +18,36 @@
 
 <body>
     <section id="app">
+
         <!--header-->
         <header>
             <!--navbar-->
             <Navbar></Navbar>
         </header>
 
-        <!--banner-->
-        <section>
-            <banner titulo="¡Bienvenido a nuestra sección de Blog!"
-                descripcion="Somos una página para ayudarte a aprender sobre el reciclaje"
-                imagen="./imgs/bannerBlog.png"></banner>
-        </section>
+        <div>
+            <add-blog></add-blog>
+        </div>
 
-        <!--feed-->
-        <section class="d-flex justify-content-center mt-5">
-            <div class=" card border border-0">
-                <div class="camps_container">
-                    <div class="camp-title-div">
-                        <h4 class="section-camp-title fw-bold ms-3">Últimas Publicaciones</h4>
-                    </div>
-                    <div class="mt-5" v-for="(item, index) in posts">
-                        <cards :created_at="item.created_at" :title="item.title" :photo="item.foto"
-                            :description="item.description" :tamañoImagen="20"></cards>
+        
 
 
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!--footer-->
-        <footer>
-            <footer-nav></footer-nav>
-        </footer>
     </section>
 
     <!--Scripts-->
     <!--bootstrap-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous">
-        </script>
+    </script>
     <!--Vuejs-->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!--js main-->
     <script src="./js/main.js"></script>
-    <!--Axios-->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!--components-->
     <script src="./js/components/Navbar.js"></script>
-    <script src="./js/components/Footer.js"></script>
-    <script src="./js/components/banner.js"></script>
-    <script src="./js/components/cards.js"></script>
+    <script src="./js/components/AddBlog.js"></script>
+    <!--Axios-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!--mounted app-->
     <script>
         const mountedApp = app.mount("#app");
