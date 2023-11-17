@@ -35,13 +35,18 @@
         <section class="d-flex justify-content-center mt-5">
             <div class=" card border border-0">
                 <div class="camps_container">
+                    <!--Añadir publicaciones-->
+                <div class="mb-5 ms-3 text-center">
+                    <h3 class="fw-bold">¿Deseas participar en el blog de la comunidad EcoWave?</h3>
+                    <p class="user-small">¡Si deseas compartir consejos o información sobre reciclar, reutilizar y/o reducir, publicalo para que las personas se enteren! </p>
+                    <a class="btn-post m-auto" href="./addblog.html">Añadir artículo</a>
+            </div>
                     <div class="camp-title-div">
                         <h4 class="section-camp-title fw-bold ms-3">Últimas Publicaciones</h4>
                     </div>
                     <div class="mt-5" v-for="(item, index) in posts">
                         <cards :created_at="item.created_at" :title="item.title" :photo="item.foto"
                             :description="item.description" :tamañoImagen="20"></cards>
-
 
                     </div>
                 </div>
