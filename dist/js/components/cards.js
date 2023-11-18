@@ -50,7 +50,7 @@ app.component('cards', {
           </div>
         </div>
         <div class="col-md-5 overflow-hidden">
-          <img :src="photo" class="img-fluid" style="{ width: tamañoImagen + '%' + ' !important' }" alt="fotografia de campaña">
+          <img v-bind:src="photo" class="img-fluid" alt="photo" style="{ width: tamañoImagen + '%' + ' !important' }" alt="fotografia de campaña">
         </div>
       </div>
     </div>

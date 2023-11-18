@@ -22,6 +22,7 @@ const app = Vue.createApp({
                     this.publicaciones.push({
                         id: element.id,
                         title: element.title,
+                        //photo: 'http://localhost/laravel_ecowave/example-app/public/imgs/' + element.photo,
                         description: element.description,
                         created_at: element.created_at
                     })
@@ -42,6 +43,7 @@ const app = Vue.createApp({
                     this.posts.push({
                         id: element.id,
                         title: element.title,
+                        photo: '/laravel_ecowave/example-app/storage/app/public/' + element.photo,
                         description: element.description,
                         date: element.date,
                         created_at: element.created_at
@@ -57,7 +59,6 @@ const app = Vue.createApp({
             //articulos recomendados
             axios.get('http://localhost/laravel_ecowave/example-app/public/api/blog/index')
             .then(response => {
-                // Obtén todos los artículos y mézclalos aleatoriamente
                 this.posts = this.shuffleArray(response.data.data);
             })
             .catch(error => {
@@ -66,7 +67,6 @@ const app = Vue.createApp({
     },
     methods: {
         shuffleArray(array) {
-            // Implementación simple de mezcla aleatoria Fisher-Yates
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
                 [array[i], array[j]] = [array[j], array[i]];

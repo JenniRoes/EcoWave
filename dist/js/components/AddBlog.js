@@ -8,35 +8,37 @@ app.component('add-blog', {
 },
   methods: {
     createPostBlog() {
-      
       const title = document.getElementById('title').value;
       const description = this.formData.description;
       const author = document.getElementById('author').value;
       const date = document.getElementById('date').value;
-      const photo = document.getElementById('photo').value;
-
-      const data = {
-        title: title,
-        description: description,
-        author: author,
-        date: date,
-        photo: photo
-      };
-
-      axios.post('http://localhost/laravel_ecowave/example-app/public/api/blog/store', data)
+    
+      // Obtén el archivo de la entrada de archivo
+      const fileInput = document.getElementById('photo');
+      const photo = fileInput.files[0];
+    
+      const formData = new FormData();
+      formData.append('title', title);
+      formData.append('description', description);
+      formData.append('author', author);
+      formData.append('date', date);
+      formData.append('photo', photo);
+    
+      axios.post('http://localhost/laravel_ecowave/example-app/public/api/blog/store', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      })
         .then(response => {
           alert("Se ha agregado el artículo correctamente");
-
           window.location.href = 'http://localhost/EcoWave/dist/blog.html';
-
         })
         .catch(error => {
           alert("Error");
           console.error(error);
         });
-
-
     }
+    
   },
 
   template:
