@@ -13400,6 +13400,16 @@ body {
   }
 }
 
+.overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* number of lines to show */
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
 @media only screen and (max-width: 480px) {
   .col-3 {
     width: 90%;
@@ -13772,6 +13782,10 @@ body {
 
 .camp-description {
   font-family: "Inter", sans-serif;
+}
+
+.card-text {
+  width: 400px;
 }
 
 /*MEDIA QUERY*/

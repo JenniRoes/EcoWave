@@ -1,9 +1,20 @@
 app.component('add-blog', {
+  data() {
+    return {
+        formData: {
+            description: ''
+        }
+    };
+},
   methods: {
-    createPost() {
+    createPostBlog() {
       //
       const title = document.getElementById('title').value;
-      const description = document.getElementById('description').value;
+      //const description = document.getElementById('description').textContent;
+      //const description = this.$refs.description.value;
+      const description = this.formData.description;
+      console.log(description);
+
       const author = document.getElementById('author').value;
       const date = document.getElementById('date').value;
       const photo = document.getElementById('photo').value;
@@ -16,6 +27,8 @@ app.component('add-blog', {
         photo: photo
       };
 
+      console.log(data);
+
       axios.post('http://localhost/laravel_ecowave/example-app/public/api/blog/store', data)
         .then(response => {
           alert("Se ha agregado el artículo correctamente");
@@ -25,7 +38,6 @@ app.component('add-blog', {
         })
         .catch(error => {
           alert("Error");
-
           console.error(error);
         });
 
@@ -40,9 +52,6 @@ app.component('add-blog', {
       <div class="card card-login">
         <div class="card-body text-center">
           <form>
-
-          
-  
             <h5 class="card-title login-title">Crear Artículo</h5>
             
             <div class="d-flex justify-content-center align-items-center flex-wrap">
@@ -52,25 +61,24 @@ app.component('add-blog', {
               </div>
             </div>
   
-  
             <div class="d-flex justify-content-center align-items-center flex-wrap">
-              <div class="mb-2">
-                <h1 class="login-text text-start">Descripción</h1>
-                <input type="textarea" class="form-control login-input" id="description" aria-describedby="description">
-              </div>
+                <div class="mb-2">
+                    <h1 class="login-text text-start">Descripción</h1>
+                    <textarea v-model="formData.description" id="description" class="form-control login-input"  aria-describedby="description"></textarea>
+                </div>
             </div>
 
             <div class="d-flex justify-content-center align-items-center flex-wrap">
             <div class="mb-2">
               <h1 class="login-text text-start">Autor</h1>
-              <input type="name" class="form-control login-input" id="author" aria-describedby="nameOrganization">
+              <input type="name" class="form-control login-input" id="author" aria-describedby="author">
             </div>
           </div>
 
           <div class="d-flex justify-content-center align-items-center flex-wrap">
             <div class="mb-2">
               <h1 class="login-text text-start">Fecha de creación</h1>
-              <input type="name" class="form-control login-input" id="date" aria-describedby="nameOrganization">
+              <input type="date" class="form-control login-input" id="date" aria-describedby="date">
             </div>
           </div>
 
@@ -87,20 +95,11 @@ app.component('add-blog', {
          
         </div>
       </div>
-
-
-
-
-
               <div class="d-flex justify-content-center align-items-center mt-5 mb-5">
-              <a href="#" class="btn-access" @click="createPost">Enviar</a>
+              <a href="#" class="btn-access" @click="createPostBlog">Enviar</a>
               </div>
 
-
-
           </form>
-  
-
         </div>
       </div>
     </section>

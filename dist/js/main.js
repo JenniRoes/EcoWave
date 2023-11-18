@@ -3,10 +3,12 @@ const app = Vue.createApp({
         return {
             publicaciones: [],
             posts: [],
+            postsrelated: [],
             tipo : localStorage.getItem('tipo'),
             username: localStorage.getItem('name'),
             email: localStorage.getItem('email'),
             created_at: localStorage.getItem('created_at')
+            
         }
     },
     mounted() {
