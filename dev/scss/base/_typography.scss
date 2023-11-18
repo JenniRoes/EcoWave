@@ -99,6 +99,7 @@
 
 .banner-title {
     font-size: vars.$fs-xlg;
+    font-family: vars.$ff-tit;
     color: vars.$clr-white;
 
     @include media-queries.respond-to(vars.$phone) {

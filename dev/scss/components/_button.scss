@@ -18,6 +18,9 @@
         margin-top: 30px;
         margin-right: 0px;
     }
+    &:hover {
+        background: #8FB989; 
+    }
 }
 
 .btn-login img {
@@ -62,12 +65,15 @@
     height: 49.836px;
     border-radius: 57.31px;
     align-items: center;
-    background: vars.$clr-green-100;
+    background: #9FCE99;
     color: vars.$clr-white;
     font-size: 20px;
     text-decoration: none;
     font-weight: 600;
 }
+.btn-post:hover {
+    background: #8FB989; 
+  }
 
 .btn-editar {
     font-size: 16px;

@@ -47,8 +47,9 @@ app.component('Perfil', {
   },
     template:
       /*html*/
-      `  		
-      <!--perfil-->
+      ` 
+      <!--perfil--> 		
+      <style>.line{ border: 1px solid #ddd; margin: 0;}</style>
       <section class="row">
         <container class="container-fluid">
           <section class="mt-5 me-5 m-perfil"> 
@@ -66,12 +67,8 @@ app.component('Perfil', {
               <a href="#" class="btn-perfil no-link" @click= "logout">Cerrar sesión</a>
               </div>
             </div>
-          
           </section>
-
-       <div>
-        <img class="img-fluid center" src="./imgs/line.png" alt="div">
-       </div>
+          <hr class="line">
         </container>
       </section>
       `
