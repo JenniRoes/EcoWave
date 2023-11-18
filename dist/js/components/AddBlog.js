@@ -8,13 +8,9 @@ app.component('add-blog', {
 },
   methods: {
     createPostBlog() {
-      //
+      
       const title = document.getElementById('title').value;
-      //const description = document.getElementById('description').textContent;
-      //const description = this.$refs.description.value;
       const description = this.formData.description;
-      console.log(description);
-
       const author = document.getElementById('author').value;
       const date = document.getElementById('date').value;
       const photo = document.getElementById('photo').value;
@@ -26,8 +22,6 @@ app.component('add-blog', {
         date: date,
         photo: photo
       };
-
-      console.log(data);
 
       axios.post('http://localhost/laravel_ecowave/example-app/public/api/blog/store', data)
         .then(response => {

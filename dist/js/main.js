@@ -12,6 +12,7 @@ const app = Vue.createApp({
         }
     },
     mounted() {
+        //mostrar publicaciones campañas
         axios.get('http://localhost/laravel_ecowave/example-app/public/api/publicacion/index')
             .then(response => {
              
@@ -31,6 +32,7 @@ const app = Vue.createApp({
             });
 
 
+            //mostrar publicaciones blog
             axios.get('http://localhost/laravel_ecowave/example-app/public/api/blog/index')
             .then(response => {
              
@@ -50,8 +52,28 @@ const app = Vue.createApp({
                 console.error(error);
             });
 
+             
 
+            //articulos recomendados
+            axios.get('http://localhost/laravel_ecowave/example-app/public/api/blog/index')
+            .then(response => {
+                // Obtén todos los artículos y mézclalos aleatoriamente
+                this.posts = this.shuffleArray(response.data.data);
+            })
+            .catch(error => {
+                console.error(error);
+            });
     },
+    methods: {
+        shuffleArray(array) {
+            // Implementación simple de mezcla aleatoria Fisher-Yates
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        },
+    }
     
 });
  

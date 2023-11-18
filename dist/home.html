@@ -50,7 +50,7 @@
 
             <div class="col-3 ms-3 p-4">
                 <h5 class=" section-camp-title fw-bold mb-4">Árticulos Recomendados</h5>
-                <div v-for="(item, index) in postsrelated.slice(0, 3)">
+                <div v-for="(item, index) in  posts.slice(0,5)">
                     <sidecard class="mb-5" :title="item.title" :description="item.description"></sidecard>
                 </div>
             </div>

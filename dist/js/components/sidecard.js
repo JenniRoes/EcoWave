@@ -15,7 +15,7 @@ app.component('sidecard', {
 <div>
     <b-card>
       <a href="./blog.html" class="sidecard-title no-link">{{title}}</a>
-      <p class="sidecard-subtitle mt-3" >{{description}}</p>
+      <p class="sidecard-subtitle mt-3 overflow" >{{description}}</p>
     </b-card>
 </div>
       `
