@@ -3,7 +3,6 @@ const app = Vue.createApp({
         return {
             publicaciones: [],
             posts: [],
-            postsrelated: [],
             tipo : localStorage.getItem('tipo'),
             username: localStorage.getItem('name'),
             email: localStorage.getItem('email'),
@@ -22,7 +21,7 @@ const app = Vue.createApp({
                     this.publicaciones.push({
                         id: element.id,
                         title: element.title,
-                        //photo: 'http://localhost/laravel_ecowave/example-app/public/imgs/' + element.photo,
+                        //photo: '/laravel_ecowave/example-app/public/imgs/' + element.photo,
                         description: element.description,
                         created_at: element.created_at
                     })
