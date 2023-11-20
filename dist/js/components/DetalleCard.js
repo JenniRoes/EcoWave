@@ -1,7 +1,5 @@
 app.component('detalle', {
 
-
-   
       data() {
         return {
           postDetails: {
@@ -36,18 +34,8 @@ app.component('detalle', {
           axios.get(`http://localhost/laravel_ecowave/example-app/public/api/publicacion/index/${postId}`)
             .then(response => {
               this.postDetails = response.data.data;
+              this.postDetails.photo='http://localhost/laravel_ecowave/example-app/public/imgs/'+ this.postDetails.photo;
 
-              const data = {
-                title: this.postDetails.title,
-                subtitle: this.postDetails.subtitle,
-                description: this.postDetails.description,
-                ubication: this.postDetails.ubication,
-                author: this.postDetails.author,
-                date:this.postDetails.created_at,
-                photo:this.postDetails.photo,
-                id: this.postDetails.id
-               
-              };
             })
             .catch(error => {
               console.error(error);
@@ -74,7 +62,8 @@ app.component('detalle', {
             
             <div class="columna-derecha">
                 <div class="text-description">
-                    <img v-bind:src="photo"  alt="Descripción de la imagen">
+                  <!--<img src="http://localhost/laravel_ecowave/example-app/public/imgs/wp5200164.png"  alt="Descripción de la imagen">-->
+                    <img :src="postDetails.photo"  alt="Descripción de la imagen">
                     <h2 class="subtitulo-principal">{{postDetails.subtitle}}</h2>
                     <p>{{postDetails.description}}</p>
                 </div>

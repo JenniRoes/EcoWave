@@ -3,6 +3,7 @@ const app = Vue.createApp({
         return {
             publicaciones: [],
             posts: [],
+            articulos: [],
             tipo : localStorage.getItem('tipo'),
             username: localStorage.getItem('name'),
             email: localStorage.getItem('email'),
@@ -16,12 +17,13 @@ const app = Vue.createApp({
             .then(response => {
              
                 let publicacion = response.data.data;
-
+               
                 publicacion.forEach((element) => {
+                   // console.log(element.photo);
                     this.publicaciones.push({
                         id: element.id,
                         title: element.title,
-                        //photo: '/laravel_ecowave/example-app/public/imgs/' + element.photo,
+                        photo: "http://localhost/laravel_ecowave/example-app/public/imgs/" + element.photo,
                         description: element.description,
                         created_at: element.created_at
                     })
@@ -33,21 +35,23 @@ const app = Vue.createApp({
 
 
             //mostrar publicaciones blog
-            axios.get('http://localhost/laravel_ecowave/example-app/public/api/blog/index')
+           axios.get('http://localhost/laravel_ecowave/example-app/public/api/blog/index')
             .then(response => {
              
                 let post = response.data.data;
-
+                console.log(post);
                 post.forEach((element) => {
                     this.posts.push({
                         id: element.id,
                         title: element.title,
-                        photo: '/laravel_ecowave/example-app/storage/app/public/' + element.photo,
+                        photo: "http://localhost/laravel_ecowave/example-app/public/imgs/" + element.photo,
                         description: element.description,
                         date: element.date,
-                        created_at: element.created_at
+                        created_at: element.created_at,
+                        author: element.author
                     })
                 });
+                console.log(this.posts);
             })
             .catch(error => {
                 console.error(error);
@@ -58,7 +62,7 @@ const app = Vue.createApp({
             //articulos recomendados
             axios.get('http://localhost/laravel_ecowave/example-app/public/api/blog/index')
             .then(response => {
-                this.posts = this.shuffleArray(response.data.data);
+                this.articulos = this.shuffleArray(response.data.data);
             })
             .catch(error => {
                 console.error(error);

@@ -31,17 +31,9 @@ app.component('detalle-blog', {
           axios.get(`http://localhost/laravel_ecowave/example-app/public/api/blog/index/${postId}`)
             .then(response => {
               this.post = response.data.data;
+              this.post.photo='http://localhost/laravel_ecowave/example-app/public/imgs/'+ this.post.photo;
               console.log(this.post);
-              const data = {
-                title: this.post.title,
-                description: this.post.description,
-                author: this.post.author,
-                date:this.post.created_at,
-                photo:this.post.photo,
-                id: this.post.id
-               
-              };
-              console.log(data);
+             
             })
             .catch(error => {
               console.error(error);
@@ -57,7 +49,7 @@ app.component('detalle-blog', {
 
             <div class="columna-derecha">
                 <div class="text-description">
-                    <img v-bind:src="post.photo"  alt="Descripción de la imagen">
+                    <img :src="post.photo"  alt="Descripción de la imagen">
                     <p>{{post.description}}</p>
                 </div>
            

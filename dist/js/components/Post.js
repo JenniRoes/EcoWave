@@ -22,6 +22,15 @@ const data = {
 const token = localStorage.getItem('token') 
 axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
+   
+
+    var partesRuta = data.photo.split('\\');
+
+    // El último elemento de la matriz resultante será el nombre del archivo
+    var nombreArchivo = partesRuta[partesRuta.length - 1];
+
+    data.photo = nombreArchivo;
+
     axios.post('http://localhost/laravel_ecowave/example-app/public/api/publicacion/store', data,  token)
         .then(response => {   
           alert("Se ha agregado el post correctamente");
@@ -37,7 +46,7 @@ axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
         });
 
 
-      }
+      },
   },
 
     template:
