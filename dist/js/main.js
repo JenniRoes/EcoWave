@@ -44,7 +44,7 @@ const app = Vue.createApp({
                     this.posts.push({
                         id: element.id,
                         title: element.title,
-                        photo: "http://localhost/laravel_ecowave/example-app/public/imgs/" + element.photo,
+                        photo: "/laravel_ecowave/example-app/storage/app/public/" + element.photo,
                         description: element.description,
                         date: element.date,
                         created_at: element.created_at,

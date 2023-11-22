@@ -125,11 +125,6 @@ app.component('editblog', {
             </div>
 
         </form>
-
-
-
-
-
            
           </div>
         </div>
