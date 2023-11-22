@@ -17,7 +17,7 @@ app.component('signup', {
         axios.post('http://localhost/laravel_ecowave/example-app/public/api/register', data)
             .then(response => {   
               alert("Se ha registrado correctamente");
-              window.location.href = 'http://localhost/EcoEcoWave/dist/login.html';
+              window.location.href = 'http://localhost/EcoWave/dist/login.html';
             })
             .catch(error => {
               
