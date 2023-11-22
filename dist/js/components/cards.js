@@ -33,6 +33,7 @@ app.component('cards', {
       default: 0
     }
   },
+  
 
   template:
   /*html*/
