@@ -143,8 +143,6 @@ methods: {
               <a href="#" class="btn-access" @click="updatePost">Enviar</a>
               </div>
 
-
-
           </form>
   
 

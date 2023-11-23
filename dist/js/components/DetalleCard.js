@@ -34,7 +34,7 @@ app.component('detalle', {
           axios.get(`http://localhost/laravel_ecowave/example-app/public/api/publicacion/index/${postId}`)
             .then(response => {
               this.postDetails = response.data.data;
-              this.postDetails.photo='http://localhost/laravel_ecowave/example-app/public/imgs/'+ this.postDetails.photo;
+              this.postDetails.photo='/laravel_ecowave/example-app/storage/app/public/'+ this.postDetails.photo;
 
             })
             .catch(error => {

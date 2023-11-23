@@ -1,20 +1,19 @@
 app.component('editblog', {
 
   data() {
-      return {
-          
-          blogDetails: {
-              title: "",
-              description:"",
-              date:"",
-              author:"",
-              photo:"",
-              id:""
-          },
-      }
+    return {
+      blogDetails: {
+        title: "",
+        description: "",
+        date: "",
+        author: "",
+        photo: "",
+        id: ""
+      },
+    }
   },
-  
-  
+
+
   mounted() {
     const blogId = this.obtenerIdDeLaUrl();
     if (blogId) {
@@ -29,49 +28,43 @@ app.component('editblog', {
       return urlParams.get('id');
     },
     getBlogDetails(blogId) {
-      
-     
-     
-      // Hacer una solicitud a la API para obtener los detalles del blog
       axios.get(`http://localhost/laravel_ecowave/example-app/public/api/blog/index/${blogId}`)
-  
-          .then(response => {
-            this.blogDetails = response.data.data;
-          })
-          .catch(error => {
-            console.error(error);
-          });
+
+        .then(response => {
+          this.blogDetails = response.data.data;
+        })
+        .catch(error => {
+          console.error(error);
+        });
     },
-  
+
     updateBlog() {
-      console.log("ID del blog a actualizar:", this.blogDetails.id);
       const data = {
         title: this.blogDetails.title,
-        subtitle: this.blogDetails.subtitle,
         description: this.blogDetails.description,
-        author:this.blogDetails.author,
-        photo:this.blogDetails.photo,
-        // Otros campos del formulario
+        author: this.blogDetails.author,
+        photo: this.blogDetails.photo,
+        date: this.blogDetails.date
       };
-      console.log("Datos a enviar:", data);
-  
     
-      axios.put(`/api/blog/update/${this.blogDetails.id}`, data)
-      .then(response => {
+      const blogId = this.blogDetails.id;  // Agrega esta línea para obtener el ID del blog
+    
+      axios.put(`http://localhost/laravel_ecowave/example-app/public/api/blog/update/${blogId}`, data)
+        .then(response => {
           console.log("Respuesta exitosa:", response);
           alert("Blog actualizado correctamente");
           window.location.href = 'http://localhost/EcoWave/dist/perfil.html';
-      })
-      .catch(error => {
+        })
+        .catch(error => {
           console.error("Error al actualizar el blog:", error);
           alert("Error al actualizar el blog");
-      });
+        });
     }
-    },
-  
-      template:
-        /*html*/
-        `  
+  },
+
+  template:
+    /*html*/
+    `  
         <section class="login-reg-bg"> 
         <div class="card card-login">
           <div class="card-body text-center">
@@ -124,12 +117,11 @@ app.component('editblog', {
             <a href="#" class="btn-access" @click="updateBlog">Enviar</a>
             </div>
 
-        </form>
-           
+        </form>  
           </div>
         </div>
       </section>
     
           `
-    
-    });
+
+});
