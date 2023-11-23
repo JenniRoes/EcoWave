@@ -1,29 +1,29 @@
 app.component('add-blog', {
   data() {
     return {
-        formData: {
-            description: ''
-        }
+      formData: {
+        description: ''
+      }
     };
-},
+  },
   methods: {
     createPostBlog() {
       const title = document.getElementById('title').value;
       const description = this.formData.description;
       const author = document.getElementById('author').value;
       const date = document.getElementById('date').value;
-    
+
       // Obtén el archivo de la entrada de archivo
       const fileInput = document.getElementById('photo');
       const photo = fileInput.files[0];
-    
+
       const formData = new FormData();
       formData.append('title', title);
       formData.append('description', description);
       formData.append('author', author);
       formData.append('date', date);
       formData.append('photo', photo);
-    
+
       axios.post('http://localhost/laravel_ecowave/example-app/public/api/blog/store', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
@@ -38,7 +38,7 @@ app.component('add-blog', {
           console.error(error);
         });
     }
-    
+
   },
 
   template:

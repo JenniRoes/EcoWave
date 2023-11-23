@@ -51,7 +51,7 @@
 
                 <div class="camps-card-container" v-for="(item, index) in publicaciones"> <!--Contenedor de cards-->
                     <cards :created_at="item.created_at" :title="item.title"
-                        :description="item.description" photo ="./imgs/fotoCampanna.png" :guardada="true" :id="item.id"></cards>
+                        :description="item.description" :photo ="item.photo" :guardada="true" :id="item.id"></cards>
 
                 </div>
             </div>

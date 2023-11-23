@@ -50,7 +50,7 @@ app.component('cards', {
           </div>
         </div>
         <div class="col-md-5">
-          <img :src="photo" class="img-fluid" style="{ width: tamañoImagen + '%' + ' !important' }" alt="fotografia de campaña">
+          <img :src="photo" class="img-fluid img-size" style="{ width: tamañoImagen + '%' + ' !important' }" alt="fotografia de campaña">
         </div>
       </div>
     </div>

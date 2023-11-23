@@ -13982,6 +13982,13 @@ body {
   height: 188px;
 }
 
+.img-size {
+  width: 367px;
+  height: 286px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .profile-picture {
   width: 200px;
   height: 200px;
