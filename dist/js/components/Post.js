@@ -1,64 +1,45 @@
 app.component('post', {
   methods: {
     createPost() {
-//
-const title = document.getElementById('title').value;
-const subtitle = document.getElementById('subtitle').value;
-const description = document.getElementById('description').value;
-const ubication = document.getElementById('ubication').value;
-const author = document.getElementById('author').value;
-const photo = document.getElementById('photo').value;
+      const title = document.getElementById('title').value;
+      const subtitle = document.getElementById('subtitle').value;
+      const description = document.getElementById('description').value;
+      const ubication = document.getElementById('ubication').value;
+      const author = document.getElementById('author').value;
 
-const data = {
-  title: title,
-  subtitle: subtitle,
-  description: description,
-  ubication: ubication,
-  author: author,
-  photo: photo
-};
-//const token = localStorage.getItem('access_token');
-//axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
-const token = localStorage.getItem('token') 
-axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+      const fileInput = document.getElementById('photo');
+      const photo = fileInput.files[0];
 
-   
+      const formData = new FormData();
+      formData.append('title', title);
+      formData.append('subtitle', subtitle);
+      formData.append('description', description);
+      formData.append('ubication', ubication);
+      formData.append('author', author);
+      formData.append('photo', photo);
 
-    var partesRuta = data.photo.split('\\');
+      const token = localStorage.getItem('token');
+      axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
 
-    // El último elemento de la matriz resultante será el nombre del archivo
-    var nombreArchivo = partesRuta[partesRuta.length - 1];
-
-    data.photo = nombreArchivo;
-
-    axios.post('http://localhost/laravel_ecowave/example-app/public/api/publicacion/store', data,  token)
-        .then(response => {   
+      axios.post('http://localhost/laravel_ecowave/example-app/public/api/publicacion/store', formData)
+        .then(response => {
           alert("Se ha agregado el post correctamente");
-          //localStorage.getItem(token); 
-
-         window.location.href = 'http://localhost/EcoWave/dist/home.html';
-
+          window.location.href = 'http://localhost/EcoWave/dist/home.html';
         })
         .catch(error => {
           alert("Error");
-
-            console.error(error);
+          console.error(error);
         });
-
-
-      },
+    }
   },
 
-    template:
-      /*html*/
-      `  
+  template:
+    /*html*/
+    `  
       <section class="login-reg-bg"> 
       <div class="card card-login">
         <div class="card-body text-center">
           <form>
-
-          
-  
             <h5 class="card-title login-title">Crear Publicación</h5>
             
             <div class="d-flex justify-content-center align-items-center flex-wrap">
@@ -109,28 +90,17 @@ axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
         <div class="mb-2">
          
         </div>
-        <div class="mb-2">
-         
+        <div class="mb-2">         
         </div>
       </div>
-
-
-
-
-
               <div class="d-flex justify-content-center align-items-center mt-5 mb-5">
               <a href="#" class="btn-access" @click="createPost">Enviar</a>
               </div>
-
-
-
           </form>
-  
-
         </div>
       </div>
     </section>
   
         `
-  
-  });
+
+});
