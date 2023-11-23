@@ -4,7 +4,9 @@ app.component('navbar', {
       `    <!--navbar-->
       <nav id="navbar-main" class="navbar navbar-expand-lg">
           <a class="navbar-brand logo-mobile color-header" href="#">
-              <img src="./imgs/logo.svg" class="logo img-fluid d-inline-block" alt="logotipo">
+              
+            <a href="./home.html">
+            <img src="./imgs/logo.svg" class="logo img-fluid d-inline-block" alt="logotipo">
           </a>
           <!--search placeholder and button-->
           <div class="input-search align-items-center">

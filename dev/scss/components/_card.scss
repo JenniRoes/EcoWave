@@ -11,7 +11,7 @@
 }
 
 .card-text {
-    width: 400px;
+    width: 26.5rem;
 }
 
 
@@ -24,6 +24,7 @@
     .card-body{
         margin: 0;
         padding-top: 1rem;
+        font-size: vars.$fs-rg;
     }
 
     .card-responsive {

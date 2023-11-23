@@ -46,7 +46,7 @@
 
 .btn-perfil {
 	margin-top: 20px;
-	background-color: #6EBA68;
+	background-color: vars.$clr-green-50;
 	color: white;
 	border: none;
 	border-radius: 57.31px; 
@@ -55,8 +55,11 @@
 	transition: background-color 0.3s ease;
 	width: 127px;
 	font-size: vars.$fs-xs;
+	font-size: 20px;
+    text-decoration: none;
+    font-weight: 600;
 }
 .btn-perfil:hover {
-	background-color: #4B955E; 
+	background-color: #8FB989;
 }
  
