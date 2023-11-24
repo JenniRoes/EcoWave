@@ -8,32 +8,32 @@ app.component('signup', {
 
         // Realizar la solicitud GET para verificar si el correo ya existe
     axios.get(`http://localhost/laravel_ecowave/example-app/public/api/check-email?email=${email}`)
-    .then(response => {
-        // Si la respuesta indica que el correo ya existe
-        if (response.data.exists) {
-            alert("Este correo electrónico ya está registrado. Por favor, use otro.");
-        } else {
-            // Si el correo no existe, realizar la solicitud POST
-            const data = {
-                name: name,
-                email: email,
-                password: password,
-                confirm_password: validation
-            };
+        .then(response => {
 
-            axios.post('http://localhost/laravel_ecowave/example-app/public/api/register', data)
-                .then(response => {   
-                    alert("Se ha registrado correctamente");
-                    window.location.href = 'http://localhost/EcoWave/dist/login.html';
-                })
-                .catch(error => {
-                    console.error(error);
-                });
-        }
-    })
-    .catch(error => {
-        console.error(error);
-    });
+                    // El correo no existe, realizar la solicitud POST
+                    const data = {
+                        name: name,
+                        email: email,
+                        password: password,
+                        confirm_password: validation
+                    };
+
+                    axios.post('http://localhost/laravel_ecowave/example-app/public/api/register', data)
+                        .then(response => {   
+                            alert("Se ha registrado correctamente");
+                            window.location.href = 'http://localhost/EcoWave/dist/login.html';
+                        })
+                        .catch(error => {
+                            console.error(error);
+                            alert("Este correo electrónico ya está registrado. Por favor, use otro.");
+
+                        });
+                
+           
+        })
+        .catch(error => {
+            console.error(error);
+        });
 }
 },
 
