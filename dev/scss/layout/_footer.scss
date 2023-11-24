@@ -11,9 +11,9 @@
 }
 
 .footer-logo {
-    padding-left: 10px;
-    width: 176px;
-    height: 47.5px;
+    width: 352px;
+    height: 95px;
+
     @include media-queries.respond-to(vars.$phone) {
         width: 174px;
         height: 47px;
@@ -33,7 +33,6 @@
 }
 
 .footer-links {
-    padding-top: 10px;
     font-weight: vars.$fw-reg;
     font-size: vars.$fs-lg;
     color: vars.$clr-white;

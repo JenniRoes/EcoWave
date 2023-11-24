@@ -47,9 +47,8 @@ app.component('Perfil', {
   },
     template:
       /*html*/
-      ` 
-      <!--perfil--> 		
-      <style>.line{ border: 1px solid #ddd; margin: 0;}</style>
+      `  		
+      <!--perfil-->
       <section class="row">
         <container class="container-fluid">
           <section class="mt-5 me-5 m-perfil"> 
@@ -70,7 +69,9 @@ app.component('Perfil', {
           
           </section>
 
-          <hr class="line">
+       <div>
+        <img class="img-fluid center" src="./imgs/line.png" alt="div">
+       </div>
         </container>
       </section>
       `

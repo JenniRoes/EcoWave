@@ -2,12 +2,12 @@ app.component('sidecard', {
   props: {
     title: {
       type: String,
-      default: "Tips ecológicos"
+      default: "Titulo de artículo"
     },
     description: {
       type: String,
-      default: "Reduce tu huella de carbono optando por medios de transporte más sostenibles, como bicicletas"
-        },
+      default: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a erat eget magna interdum posuere."
+    },
     id:{
       type: Number,
       default: 0
