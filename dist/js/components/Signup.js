@@ -6,24 +6,35 @@ app.component('signup', {
         const password = document.getElementById('password').value;
         const validation = document.getElementById('validation').value;
 
-        // Crear el objeto de datos a enviar en la solicitud POST
-        const data = {
-            name: name,
-            email: email,
-            password: password,
-            confirm_password: validation
-        };
+        // Realizar la solicitud GET para verificar si el correo ya existe
+    axios.get(`http://localhost/laravel_ecowave/example-app/public/api/check-email?email=${email}`)
+    .then(response => {
+        // Si la respuesta indica que el correo ya existe
+        if (response.data.exists) {
+            alert("Este correo electrónico ya está registrado. Por favor, use otro.");
+        } else {
+            // Si el correo no existe, realizar la solicitud POST
+            const data = {
+                name: name,
+                email: email,
+                password: password,
+                confirm_password: validation
+            };
 
-        axios.post('http://localhost/laravel_ecowave/example-app/public/api/register', data)
-            .then(response => {   
-              alert("Se ha registrado correctamente");
-              window.location.href = 'http://localhost/EcoWave/dist/login.html';
-            })
-            .catch(error => {
-              
-                console.error(error);
-            });
-    }
+            axios.post('http://localhost/laravel_ecowave/example-app/public/api/register', data)
+                .then(response => {   
+                    alert("Se ha registrado correctamente");
+                    window.location.href = 'http://localhost/EcoWave/dist/login.html';
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }
+    })
+    .catch(error => {
+        console.error(error);
+    });
+}
 },
 
     template:

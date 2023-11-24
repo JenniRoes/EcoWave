@@ -183,6 +183,7 @@
     font-family: vars.$ff-primary;
     font-size: vars.$fs-mdl;
     font-weight: vars.$fw-reg;
+    vertical-align: middle;
 
     @include media-queries.respond-to(vars.$phone) {
         font-size: vars.$fs-xs;

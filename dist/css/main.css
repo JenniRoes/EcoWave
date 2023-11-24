@@ -13639,6 +13639,7 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 25px;
   font-weight: 500;
+  vertical-align: middle;
 }
 @media only screen and (max-width: 480px) {
   .color-white {

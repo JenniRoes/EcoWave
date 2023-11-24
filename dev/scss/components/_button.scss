@@ -10,6 +10,7 @@
     margin-right: 75px;
     margin-left: 54px;
 
+
     @include media-queries.respond-to(vars.$phone) {
         width: 120px;
         height: 26px;
