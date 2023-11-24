@@ -28,9 +28,6 @@ app.component('login', {
         }
         localStorage.setItem('tipo', texto);
 
-        
-        
-
       })
       .catch(error => {
         console.log(error);

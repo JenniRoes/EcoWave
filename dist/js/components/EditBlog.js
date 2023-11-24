@@ -47,7 +47,7 @@ app.component('editblog', {
         date: this.blogDetails.date
       };
     
-      const blogId = this.blogDetails.id;  // Agrega esta línea para obtener el ID del blog
+      const blogId = this.blogDetails.id;  //ID del blog
     
       axios.put(`http://localhost/laravel_ecowave/example-app/public/api/blog/update/${blogId}`, data)
         .then(response => {
