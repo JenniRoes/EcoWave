@@ -40,7 +40,7 @@ app.component('cards', {
       .then(response => {
         alert("Se ha eliminado el post correctamente");
 
-        window.location.href = 'http://localhost/EcoWave/dist/home.html';
+        window.location.href = 'http://localhost/EcoWave/dist/perfil.html';
       });
     },
   },
@@ -57,7 +57,7 @@ app.component('cards', {
             <p class="card-text mb-2 overflow">{{description}}</p>
             <a :href="'./detalle.html?id=' +id" class="camp-btn border-0 p-0">Leer Más</a>
             <a :href="'./editpost.html?id=' + id" class="btn-editar ms-4" v-if="guardada">Editar</a>
-            <a href="#" class="btn-eliminar ms-4" v-if="guardada" @click="deletePost" >Eliminar</a>
+            <a href="#" class="btn-eliminar ms-4" v-if="guardada" @click="deletePost(id)" >Eliminar</a>
           </div>
         </div>
         <div class="col-md-5">
