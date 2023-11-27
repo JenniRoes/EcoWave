@@ -21,10 +21,10 @@ app.component('login', {
         localStorage.setItem('email', response.data.data.email);
         localStorage.setItem('created_at', response.data.data.created_at);
         if(response.data.data.type==0){
-            texto="eres un viewer"
+            texto="Eres un viewer"
         }
         if(response.data.data.type==1){
-          texto="eres un organizador"
+          texto="Eres un organizador"
         }
         localStorage.setItem('tipo', texto);
 

@@ -33,7 +33,20 @@ app.component('cards', {
       default: 0
     }
   },
-
+  methods: {
+    deletePost() {
+      if (window.confirm("¿Estás seguro de que quieres eliminar este post?")) {
+        const id = this.id;
+        console.log(id);
+        axios.delete(`http://localhost/laravel_ecowave/example-app/public/api/publicacion/delete/${id}`)
+          .then(response => {
+            alert("Se ha eliminado el post correctamente");
+            window.location.href = 'http://localhost/EcoWave/dist/perfil.html';
+          });
+      }
+    },
+  },
+  
   template:
   /*html*/
   `  
@@ -46,7 +59,7 @@ app.component('cards', {
             <p class="card-text mb-2 overflow">{{description}}</p>
             <a :href="'./detalle.html?id=' +id" class="camp-btn border-0 p-0">Leer Más</a>
             <a :href="'./editpost.html?id=' + id" class="btn-editar ms-4" v-if="guardada">Editar</a>
-            <a href="#" class="btn-eliminar ms-4" v-if="guardada">Eliminar</a>
+            <a href="#" class="btn-eliminar ms-4" v-if="guardada" @click="deletePost">Eliminar</a>
           </div>
         </div>
         <div class="col-md-5">
