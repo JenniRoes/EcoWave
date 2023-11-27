@@ -50,7 +50,7 @@ app.component('cards', {
   template:
   /*html*/
   `  
-    <div class="card border border-0 mb-5">
+    <div class="card border border-1  mb-5">
       <div class="card-flex row g-0">
         <div class="col-md-7">
           <div class="card-body">

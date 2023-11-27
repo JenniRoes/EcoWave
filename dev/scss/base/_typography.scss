@@ -80,11 +80,17 @@
 }
 
 
-.user-body{
-    color: vars.$clr-gray-100;
-    font-family: vars.$ff-primary;
-    font-size: vars.$fs-mdl;
+.user-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    border-radius: 57.31px;
+    color: vars.$clr-white;
+    font-size: vars.$fs-sm;
     font-weight: vars.$fw-reg;
+    background-color: vars.$clr-lightblue;
     margin-top: 1rem;
     @include media-queries.respond-to(vars.$phone){
         justify-content: center;
@@ -167,7 +173,7 @@
 .sidecard-subtitle {
     color: #686868;
     font-family: Inter;
-    font-size: 20px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;

@@ -27,8 +27,7 @@
 
         <!--perfil-->
         <section>
-            <Perfil user_img="./imgs/accountCircle.png" :user="username" :email="email" :tipo="tipo"
-                ubication="Barranca, Puntarenas" active_campain_number="3"></Perfil>
+            <Perfil user_img="./imgs/accountCircle.png" :user="username" :email="email" :tipo="tipo"></Perfil>
         </section>
 
         <!--feed-->
@@ -39,7 +38,7 @@
                 <h5 class="section-camp-title fw-bold">Campañas guardadas</h5>
 
                 <div v-for="(item, index) in guardadas">
-                    <sidecard class="mb-5" :title="item.title" :description="item.description" :id="item.id"></sidecard>
+                    <sidecard class="mb-5 mt-3" :title="item.title" :description="item.description" :id="item.id"></sidecard>
                 </div>
 
             </div>

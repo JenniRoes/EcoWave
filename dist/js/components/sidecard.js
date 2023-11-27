@@ -18,9 +18,10 @@ app.component('sidecard', {
     `    
 <div>
     <b-card>
-      <a :href="'./detalleblog.html?id=' +id"  class="sidecard-title no-link">{{title}}</a>
-      <p class="sidecard-subtitle mt-3 overflow" >{{description}}</p>
+      <a :href="'./detalleblog.html?id=' +id"  class="sidecard-title no-link mt-5">{{title}}</a>
+      <p class="sidecard-subtitle mt-3 overflow mb-3" >{{description}}</p>
     </b-card>
 </div>
+
       `
 });

@@ -44,14 +44,14 @@ app.component('search', {
     template:
         /* html */
         `
-    <div class="row mt-5">
+    <div class="row mt-5 ms-5">
     <div v-if="results != null">
         <h4 class='ms-2 mt-3'>Resultados para <span class='fw-bolder card-link'>{{this.keyword}}</span></h4>
     </div>
     </div>
-    <div  class="row mt-5">
+    <div  class="row mt-5 ms-5">
         <div v-for="(item, index) in results" class="col mb-4">
-        <cards :image="item.image" :title="item.title"
+        <cards :photo="item.photo" :title="item.title"
         :description="item.description" :data="item" :id="item.id"></cards>
         </div>
     </div>

@@ -32,7 +32,6 @@ app.component('detalle-blog', {
             .then(response => {
               this.post = response.data.data;
               this.post.photo='/laravel_ecowave/example-app/storage/app/public/'+ this.post.photo;
-              console.log(this.post);
               
             })
             .catch(error => {
@@ -42,18 +41,14 @@ app.component('detalle-blog', {
       },
     template: 
     /*html*/`
-    <h1 class="titulo">{{post.title}}</h1>	 
-	<p class="autor">Autor: {{post.author}} | Fecha de Publicación: {{post.created_at}}</p>
+    <h1 class="titulo ms-3">{{post.title}}</h1>	 
+	<p class="autor ms-3">Autor: {{post.author}} | Fecha de Publicación: {{post.created_at}}</p>
 
         <div class="detalle border-decoration gap-columnas">
-
-            <div class="columna-derecha">
                 <div class="text-description">
-                    <img :src="post.photo"  alt="Descripción de la imagen">
-                    <p>{{post.description}}</p>
+                    <img :src="post.photo" class="mt-3 img-blog"  alt="Descripción de la imagen">
+                    <p class="mt-5">{{post.description}}</p>
                 </div>
-           
-            </div>
         </div>
     `
  })

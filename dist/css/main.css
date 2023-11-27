@@ -13527,15 +13527,27 @@ body {
   }
 }
 
-.user-body {
-  color: #686868;
-  font-family: "Inter", sans-serif;
-  font-size: 25px;
+.user-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 40px;
+  border-radius: 57.31px;
+  color: #ffffff;
+  font-size: 16px;
   font-weight: 500;
+  background-color: #5FABDF;
   margin-top: 1rem;
 }
 @media only screen and (max-width: 480px) {
-  .user-body {
+  .user-type {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -13622,7 +13634,7 @@ body {
 .sidecard-subtitle {
   color: #686868;
   font-family: Inter;
-  font-size: 20px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -14012,6 +14024,18 @@ body {
      object-fit: cover;
 }
 
+.divider {
+  border-top: 1px solid #ccc;
+  margin-top: 15px;
+}
+
+.img-blog {
+  width: 1200px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .profile-picture {
   width: 200px;
   height: 200px;
@@ -14249,8 +14273,8 @@ body {
 }
 
 .footer-logo {
-  width: 352px;
-  height: 95px;
+  width: 310px;
+  height: 85px;
 }
 @media only screen and (max-width: 480px) {
   .footer-logo {
@@ -14274,8 +14298,10 @@ body {
 
 .footer-links {
   font-weight: 500;
-  font-size: 36px;
+  font-size: 25px;
   color: #ffffff;
+  margin-left: 10px;
+  margin-top: 15px;
 }
 @media only screen and (max-width: 480px) {
   .footer-links {

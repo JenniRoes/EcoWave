@@ -74,8 +74,8 @@ app.component('detalle', {
           }
         );
 
-        if (response.data && response.data.message) {
-          alert(response.data.message);
+        if (response.data) {
+          alert("La publicación se ha guardado correctamente en su perfil");
         } else {
           console.error("Error al guardar la publicación: Respuesta del servidor inesperada");
         }

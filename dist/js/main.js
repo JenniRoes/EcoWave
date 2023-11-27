@@ -21,7 +21,6 @@ const app = Vue.createApp({
                 let publicacion = response.data.data;
 
                 publicacion.forEach((element) => {
-                    // console.log(element.photo);
                     this.publicaciones.push({
                         id: element.id,
                         title: element.title,
@@ -76,7 +75,6 @@ const app = Vue.createApp({
             }
         })
             .then(response => {
-                console.log(response);
                 
                 let postsGuardados = response.data.data;
 

@@ -45,7 +45,7 @@ app.component('card-blog', {
             <h5 class="fs-4 fw-bolder">{{title}}</h5>
             <p class="card-text mb-2 overflow">{{description}}</p>
             <a :href="'./detalleblog.html?id=' +id" class="camp-btn border-0 p-0">Leer Más</a>
-            <a :href="'./editblog.html?id=' + id" class="btn-editar ms-4">Editar</a>
+            <a :href="'./editblog.html?id=' + id" class="btn-editar ms-4" v-if="guardada">Editar</a>
             <a href="#" class="btn-eliminar ms-4" v-if="guardada">Eliminar</a>
           </div>
         </div>

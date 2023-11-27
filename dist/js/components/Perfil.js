@@ -60,7 +60,7 @@ app.component('Perfil', {
               <div class="col-5">
                 <h1 class="user-title">{{ user }}</h1>
                 <h3 class="user-small">{{ email }}</h3>
-                <h2 class="user-body">{{ tipo }}</h2>
+                <p class="user-type">{{ tipo }}</p>
               </div>
               <div class="col-3 m-logout">
               <a href="#" class="btn-perfil no-link" @click= "logout">Cerrar sesión</a>
@@ -70,7 +70,7 @@ app.component('Perfil', {
           </section>
 
        <div>
-        <img class="img-fluid center" src="./imgs/line.png" alt="div">
+        <img class="img-fluid center ms-5 ps-5 mt-2" src="./imgs/line.png" alt="div">
        </div>
         </container>
       </section>
