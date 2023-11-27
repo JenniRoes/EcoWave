@@ -13751,6 +13751,28 @@ body {
   text-decoration: none;
 }
 
+.btn-guardar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #5FABDF;
+  width: 230px;
+  height: 40px;
+  border-radius: 57.31px;
+  border: none;
+  margin-left: 480px;
+}
+
 .camp-title-div {
   font-family: "Inter", sans-serif;
   display: -webkit-box;

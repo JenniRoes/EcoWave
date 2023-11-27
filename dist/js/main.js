@@ -4,22 +4,24 @@ const app = Vue.createApp({
             publicaciones: [],
             posts: [],
             articulos: [],
-            tipo : localStorage.getItem('tipo'),
+            guardadas: [],
+            tipo: localStorage.getItem('tipo'),
             username: localStorage.getItem('name'),
             email: localStorage.getItem('email'),
-            created_at: localStorage.getItem('created_at')
-            
+            created_at: localStorage.getItem('created_at'),
+            token: localStorage.getItem('token'),
+
         }
     },
     mounted() {
         //mostrar publicaciones campañas
         axios.get('http://localhost/laravel_ecowave/example-app/public/api/publicacion/index')
             .then(response => {
-             
+
                 let publicacion = response.data.data;
-               
+
                 publicacion.forEach((element) => {
-                   // console.log(element.photo);
+                    // console.log(element.photo);
                     this.publicaciones.push({
                         id: element.id,
                         title: element.title,
@@ -34,12 +36,12 @@ const app = Vue.createApp({
             });
 
 
-            //mostrar publicaciones blog
-           axios.get('http://localhost/laravel_ecowave/example-app/public/api/blog/index')
+        //mostrar publicaciones blog
+        axios.get('http://localhost/laravel_ecowave/example-app/public/api/blog/index')
             .then(response => {
-             
+
                 let post = response.data.data;
-                console.log(post);
+
                 post.forEach((element) => {
                     this.posts.push({
                         id: element.id,
@@ -51,22 +53,45 @@ const app = Vue.createApp({
                         author: element.author
                     })
                 });
-                console.log(this.posts);
             })
             .catch(error => {
                 console.error(error);
             });
 
-             
 
-            //articulos recomendados
-            axios.get('http://localhost/laravel_ecowave/example-app/public/api/blog/index')
+
+        //articulos recomendados
+        axios.get('http://localhost/laravel_ecowave/example-app/public/api/blog/index')
             .then(response => {
                 this.articulos = this.shuffleArray(response.data.data);
             })
             .catch(error => {
                 console.error(error);
             });
+
+        //mostrar publicaciones guardadas
+        axios.get('http://localhost/laravel_ecowave/example-app/public/api/publicacion/save/index', {
+            headers: {
+                Authorization: `Bearer ${this.token}`,
+            }
+        })
+            .then(response => {
+                console.log(response);
+                
+                let postsGuardados = response.data.data;
+
+                postsGuardados.forEach((element) => {
+                    this.guardadas.push({
+                        id: element.id,
+                        title: element.title,
+                        description: element.description
+                    })
+                });
+            })
+            .catch(error => {
+                console.error(error);
+            });
+
     },
     methods: {
         shuffleArray(array) {
@@ -77,6 +102,6 @@ const app = Vue.createApp({
             return array;
         },
     }
-    
+
 });
- 
+

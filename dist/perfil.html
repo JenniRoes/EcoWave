@@ -37,21 +37,24 @@
                 <h5 class="section-camp-title fw-bold">Información de la cuenta</h5>
                 <cuenta-cards class="mb-5" :created_at="created_at"></cuenta-cards>
                 <h5 class="section-camp-title fw-bold">Campañas guardadas</h5>
-                <sidecard class="mb-5"></sidecard>
-                <sidecard class="mb-5"></sidecard>
+
+                <div v-for="(item, index) in guardadas">
+                    <sidecard class="mb-5" :title="item.title" :description="item.description" :id="item.id"></sidecard>
+                </div>
+
             </div>
             <div class="col-7 card  border border-0 rounded">
                 <!--Añadir publicaciones-->
                 <div class="mb-5 ms-3 text-center">
-                        <h3 class="fw-bold">¿Has participado en una nueva campaña?</h3>
-                        <p class="user-small">¡Si estás organizando o participando en una campaña de reciclaje o
-                            limpieza, publicala para que las personas se enteren! </p>
-                        <a class="btn-post m-auto" href="./post.html">Añadir publicación</a>
+                    <h3 class="fw-bold">¿Has participado en una nueva campaña?</h3>
+                    <p class="user-small">¡Si estás organizando o participando en una campaña de reciclaje o
+                        limpieza, publicala para que las personas se enteren! </p>
+                    <a class="btn-post m-auto" href="./post.html">Añadir publicación</a>
                 </div>
 
                 <div class="camps-card-container" v-for="(item, index) in publicaciones"> <!--Contenedor de cards-->
-                    <cards :created_at="item.created_at" :title="item.title"
-                        :description="item.description" :photo ="item.photo" :guardada="true" :id="item.id"></cards>
+                    <cards :created_at="item.created_at" :title="item.title" :description="item.description"
+                        :photo="item.photo" :guardada="true" :id="item.id"></cards>
 
                 </div>
             </div>
